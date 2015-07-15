@@ -16,6 +16,7 @@ task :apigen do
   end
 
   sh "git clone git@github.com:wp-papi/papi.git #{source}"
+  sh "cd #{source} && git checkout 2.x"
   sh "apigen generate -s #{source}/src -d #{target}"
 
   FileUtils.remove_dir(source)
