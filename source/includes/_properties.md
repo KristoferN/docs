@@ -640,9 +640,7 @@ With this property you can add a image from the WordPress media library. If the 
 
 ### Settings
 
-Key  | Default      | Description
------|--------------|----------------------------------------------------------
-html | empty string | String with html or a callable function or method.
+No settings exists.
 
 ## Number
 
