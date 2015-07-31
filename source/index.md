@@ -24,7 +24,7 @@ includes:
   - page_type
   - properties
   - property_filters
-  - property_rules
+  - conditional_logic
   - setting_filters
   - custom_property
 
