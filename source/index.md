@@ -8,6 +8,7 @@ toc_footers:
   - <a href='http://github.com/wp-papi/papi'>Fork me on GitHub</a>
   - <a href='http://wp-papi.github.io/'>Papi project site</a>
   - <a href='apigen/'>API reference docs</a>
+  - <a href='https://github.com/wp-papi/papi/releases'>Changelog</a>
   - <a href='https://wp-papi.github.io/docs-1.x'>Documentation for Papi 1.x</a>
 
 includes:
@@ -23,6 +24,7 @@ includes:
   - page_type
   - properties
   - property_filters
+  - property_rules
   - setting_filters
   - custom_property
 
