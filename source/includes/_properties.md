@@ -300,6 +300,50 @@ The WordPress editor.
 
 No settings exists.
 
+## File
+
+**type** `file`
+
+```php
+<?php
+
+/**
+ * Example of file.
+ */
+
+papi_property( [
+  'title' => 'File',
+  'slug'  => 'my_file_slug',
+  'type'  => 'file'
+] )
+
+/**
+ * Example output.
+ */
+
+stdClass Object
+(
+      [file] => '2014/09/text.txt'
+      [alt] => ''
+      [caption] => 'Caption text'
+      [description] => 'Description text'
+      [id] => 6
+      [is_image] => false
+      [title] => 'Title text'
+      [url] => 'http://site.com/wp-content/uploads/2014/09/test.txt'
+)
+```
+
+### Description
+
+With this property you can add a file from the WordPress media library. If the `multiple` setting is set to true the output will be a array with objects instead of just one object.
+
+![File example](/images/docs/property-file.png)
+
+### Settings
+
+No settings exists.
+
 ## Flexible
 
 **type** `flexible`
@@ -377,7 +421,7 @@ array
 
 The flexible property can create a repeater with different layouts that contains sub fields. That's the big different from a [repeater property](#repeater).
 
-![Image example](/images/docs/property-flexible.png)
+![Flexible example](/images/docs/property-flexible.png)
 
 ### Settings
 
@@ -626,7 +670,7 @@ stdClass Object
       [caption] => 'Caption text'
       [description] => 'Description text'
       [id] => 6
-      [is_image] => 1
+      [is_image] => true
       [title] => 'Title text'
       [url] => 'http://site.com/wp-content/uploads/2014/09/cube.jpg'
 )
@@ -634,7 +678,7 @@ stdClass Object
 
 ### Description
 
-With this property you can add a image from the WordPress media library. If the gallery setting is set to true the output will be a array with objects instead of just one object.
+With this property you can add a image from the WordPress media library.
 
 ![Image example](/images/docs/property-image.png)
 
