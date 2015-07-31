@@ -267,6 +267,7 @@ Key           | Default            | Description
 items         | array              | Array with options, value or key/value
 placeholder   | empty string       | Placeholder text that's displayed when no option is slected.
 selected      | empty string       | The select item that will be selected from start. The value should match a key of your items
+select2       | true               | If true Select2 will be used, if false the native browser dropdown will be used. (since 2.2.0)
 
 ## Editor
 
@@ -303,6 +304,7 @@ No settings exists.
 ## File
 
 **type** `file`
+**since** `2.2.0`
 
 ```php
 <?php
@@ -781,6 +783,7 @@ Key           | Default       | Description
 placeholder   | empty string  | Placeholder text that's displayed when no option is slected.
 post_type     | 'post'        | The post type that the property will load posts from. Can only be one post type
 query         | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+select2       | true          | If true Select2 will be used, if false the native browser dropdown will be used. (since 2.2.0)
 
 ## Radio buttons
 
@@ -1152,3 +1155,80 @@ This property will output the textarea tag and the output will be a string with 
 Key           | Default | Description
 --------------|---------|------------
 mediauploader | false   | When this is `true` a button will show next to the input field where you can open the WordPress media library
+
+## User
+
+**type** `user`
+**since** `2.2.0`
+
+```php
+<?php
+
+/**
+ * Example of user.
+ */
+
+papi_property( [
+  'title'    => 'User',
+  'slug'     => 'my_user_slug',
+  'type'     => 'user'
+] )
+
+/**
+ * Example output.
+ */
+
+object(WP_User)#327 (7) {
+  ["data"]=>
+  object(stdClass)#323 (10) {
+    ["ID"]=>
+    string(1) "1"
+    ["user_login"]=>
+    string(5) "admin"
+    ["user_pass"]=>
+    string(34) ""
+    ["user_nicename"]=>
+    string(5) "admin"
+    ["user_email"]=>
+    string(24) "admin@wordpress.local"
+    ["user_url"]=>
+    string(0) ""
+    ["user_registered"]=>
+    string(19) "2015-04-19 12:27:23"
+    ["user_activation_key"]=>
+    string(0) ""
+    ["user_status"]=>
+    string(1) "0"
+    ["display_name"]=>
+    string(14) "Admin Test"
+  }
+  ["ID"]=>
+  int(1)
+  ["caps"]=>
+  array(1) {
+    ["administrator"]=>
+    bool(true)
+  }
+  ["cap_key"]=>
+  string(15) "wp_capabilities"
+  ["roles"]=>
+  array(1) {
+    [0]=>
+    string(13) "administrator"
+  }
+  ["allcaps"]=>
+  array(64) {}
+  ["filter"]=>
+  NULL
+}
+```
+
+### Description
+
+With this property you can add reference to a user.
+
+### Settings
+
+Key           | Default       | Description
+--------------|---------------|--------------------------------------------------
+select2       | true          | If true Select2 will be used, if false the native browser dropdown will be used. (since 2.2.0)
