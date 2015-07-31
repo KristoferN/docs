@@ -73,10 +73,31 @@ A single rule has four different keys. The rule should be a array in the top lev
 
 Key         | Default      | Description
 ------------|--------------|------------
-operator    | '='          | The operator to use. Possible values are '=', '!=', '>', '>=', '<', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'BETWEEN', 'NOT BETWEEN', 'EXISTS', and 'NOT EXISTS'.
+operator    | '='          | The operator to use. Possible values are '=', '!=', '>', '>=', '<', '<=', 'LIKE', 'NOT LIKE', 'IN', 'NOT IN', 'BETWEEN', 'NOT BETWEEN', 'EXISTS', 'NOT EXISTS', 'EMPTY' and 'NOT EMPTY'.
 slug        | empty string | The slug of the property to read from.
 source      | null         | The source to compare the value with instead of fetching it from field or database. Possible values are callable function (no closure), mixed values.
 value       | null         | The value to compare to.
+
+## Operators
+
+Operat        | Example value | Description
+--------------|---------------|-----------------
+'='           | true          | Equal value
+'!='          | false         | Not equal value
+'>'           | 12            | Greater then a number
+'>='          | 13            | Greater then or equal a number
+'<'           | 14            | Less then a number
+'<='          | 15            | Less then or equal a number
+'LIKE'        | 'hello'       | Check if a string contains the value
+'NOT LIKE'    | 'hello'       | Check if a string not contains the value
+'IN'          | [1, 2]        | In array
+'NOT IN'      | [3, 4]        | Not in array
+'BETWEEN'     | [5, 6]        | Between two numbers
+'NOT BETWEEN' | [7, 8]        | Not between two numbers
+'EXISTS'      |               | Property value should not be null or empty array (Papi does not save empty arrays)
+'NOT EXISTS'  |               | Property value should be null or empty array (Papi does not save empty arrays)
+'EMPTY'       |               | Property value should be empty. '0', 0 and false are not empty.
+'NOT EMPTY'   |               | Property value should not be empty. '0', 0 and false are not empty.
 
 ## Flexible and Repeater
 
