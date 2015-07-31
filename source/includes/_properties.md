@@ -342,7 +342,9 @@ With this property you can add a file from the WordPress media library. If the `
 
 ### Settings
 
-No settings exists.
+Key      | Default | Description
+---------|---------|------------------------------------------------------------
+multiple | false   | If true you can add multiple files
 
 ## Flexible
 
