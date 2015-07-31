@@ -119,8 +119,8 @@ With this property you can add multiple checkboxes. The key is the value that th
 
 Key      | Default | Description
 ---------|---------|------------------------------------------------------------
-items    | array | Array with checkboxes, value or key/value
-selected | array | The seleceted key or array of keys
+items    | array   | Array with checkboxes, value or key/value
+selected | array   | The seleceted key or array of keys
 
 ## Color
 
