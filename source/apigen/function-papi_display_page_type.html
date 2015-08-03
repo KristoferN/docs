@@ -42,8 +42,11 @@
 				<li><a href="class-Papi_Admin_Option_Handler.html">Papi_Admin_Option_Handler</a></li>
 				<li><a href="class-Papi_Admin_Post_Handler.html">Papi_Admin_Post_Handler</a></li>
 				<li><a href="class-Papi_Admin_View.html">Papi_Admin_View</a></li>
+				<li><a href="class-Papi_Conditional_Rules.html">Papi_Conditional_Rules</a></li>
 				<li><a href="class-Papi_Container.html">Papi_Container</a></li>
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
+				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
+				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Loader.html">Papi_Loader</a></li>
@@ -62,6 +65,7 @@
 				<li><a href="class-Papi_Property_Dropdown.html">Papi_Property_Dropdown</a></li>
 				<li><a href="class-Papi_Property_Editor.html">Papi_Property_Editor</a></li>
 				<li><a href="class-Papi_Property_Email.html">Papi_Property_Email</a></li>
+				<li><a href="class-Papi_Property_File.html">Papi_Property_File</a></li>
 				<li><a href="class-Papi_Property_Flexible.html">Papi_Property_Flexible</a></li>
 				<li><a href="class-Papi_Property_Gallery.html">Papi_Property_Gallery</a></li>
 				<li><a href="class-Papi_Property_Hidden.html">Papi_Property_Hidden</a></li>
@@ -75,7 +79,8 @@
 				<li><a href="class-Papi_Property_Repeater.html">Papi_Property_Repeater</a></li>
 				<li><a href="class-Papi_Property_String.html">Papi_Property_String</a></li>
 				<li><a href="class-Papi_Property_Text.html">Papi_Property_Text</a></li>
-				<li class="active"><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
+				<li><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></li>
+				<li><a href="class-Papi_Property_User.html">Papi_Property_User</a></li>
 			</ul>
 
 
@@ -84,6 +89,7 @@
 
 			<h3>Functions</h3>
 			<ul>
+				<li><a href="function-current_page.html" class="deprecated">current_page</a></li>
 				<li><a href="function-papi.html">papi</a></li>
 				<li><a href="function-papi_action_delete_value.html">papi_action_delete_value</a></li>
 				<li><a href="function-papi_action_include.html">papi_action_include</a></li>
@@ -94,11 +100,16 @@
 				<li><a href="function-papi_dashify.html">papi_dashify</a></li>
 				<li><a href="function-papi_delete_field.html">papi_delete_field</a></li>
 				<li><a href="function-papi_delete_option.html">papi_delete_option</a></li>
+				<li><a href="function-papi_delete_property_meta_value.html">papi_delete_property_meta_value</a></li>
 				<li class="active"><a href="function-papi_display_page_type.html">papi_display_page_type</a></li>
+				<li><a href="function-papi_doing_ajax.html">papi_doing_ajax</a></li>
 				<li><a href="function-papi_esc_html.html">papi_esc_html</a></li>
 				<li><a href="function-papi_f.html">papi_f</a></li>
+				<li><a href="function-papi_field.html" class="deprecated">papi_field</a></li>
 				<li><a href="function-papi_field_shortcode.html">papi_field_shortcode</a></li>
 				<li><a href="function-papi_field_value.html">papi_field_value</a></li>
+				<li><a href="function-papi_fields.html" class="deprecated">papi_fields</a></li>
+				<li><a href="function-papi_filter_conditional_rule_allowed.html">papi_filter_conditional_rule_allowed</a></li>
 				<li><a href="function-papi_filter_format_value.html">papi_filter_format_value</a></li>
 				<li><a href="function-papi_filter_load_value.html">papi_filter_load_value</a></li>
 				<li><a href="function-papi_filter_settings_directories.html">papi_filter_settings_directories</a></li>
@@ -141,6 +152,7 @@
 				<li><a href="function-papi_get_post_type.html">papi_get_post_type</a></li>
 				<li><a href="function-papi_get_post_types.html">papi_get_post_types</a></li>
 				<li><a href="function-papi_get_property_class_name.html">papi_get_property_class_name</a></li>
+				<li><a href="function-papi_get_property_meta_value.html">papi_get_property_meta_value</a></li>
 				<li><a href="function-papi_get_property_options.html">papi_get_property_options</a></li>
 				<li><a href="function-papi_get_property_type.html">papi_get_property_type</a></li>
 				<li><a href="function-papi_get_property_type_from_base64.html">papi_get_property_type_from_base64</a></li>
@@ -151,25 +163,27 @@
 				<li><a href="function-papi_get_slugs.html">papi_get_slugs</a></li>
 				<li><a href="function-papi_get_tab_options.html">papi_get_tab_options</a></li>
 				<li><a href="function-papi_html_name.html">papi_html_name</a></li>
+				<li><a href="function-papi_html_tag.html">papi_html_tag</a></li>
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_property.html">papi_is_property</a></li>
 				<li><a href="function-papi_is_property_type_key.html">papi_is_property_type_key</a></li>
+				<li><a href="function-papi_is_rule.html">papi_is_rule</a></li>
 				<li><a href="function-papi_management_page_type_render_box.html">papi_management_page_type_render_box</a></li>
 				<li><a href="function-papi_nl2br.html">papi_nl2br</a></li>
 				<li><a href="function-papi_option_shortcode.html">papi_option_shortcode</a></li>
 				<li><a href="function-papi_populate_properties.html">papi_populate_properties</a></li>
 				<li><a href="function-papi_property.html">papi_property</a></li>
-				<li><a href="function-papi_property_get_meta.html">papi_property_get_meta</a></li>
-				<li><a href="function-papi_property_update_meta.html">papi_property_update_meta</a></li>
 				<li><a href="function-papi_remove_papi.html">papi_remove_papi</a></li>
 				<li><a href="function-papi_remove_trailing_quotes.html">papi_remove_trailing_quotes</a></li>
+				<li><a href="function-papi_render_html_tag.html">papi_render_html_tag</a></li>
 				<li><a href="function-papi_render_properties.html">papi_render_properties</a></li>
 				<li><a href="function-papi_render_property.html">papi_render_property</a></li>
 				<li><a href="function-papi_require_text.html">papi_require_text</a></li>
 				<li><a href="function-papi_required_html.html">papi_required_html</a></li>
+				<li><a href="function-papi_rule.html">papi_rule</a></li>
 				<li><a href="function-papi_santize_data.html">papi_santize_data</a></li>
 				<li><a href="function-papi_setup_tabs.html">papi_setup_tabs</a></li>
 				<li><a href="function-papi_slugify.html">papi_slugify</a></li>
@@ -182,6 +196,7 @@
 				<li><a href="function-papi_underscorify.html">papi_underscorify</a></li>
 				<li><a href="function-papi_update_field.html">papi_update_field</a></li>
 				<li><a href="function-papi_update_option.html">papi_update_option</a></li>
+				<li><a href="function-papi_update_property_meta_value.html">papi_update_property_meta_value</a></li>
 				<li><a href="function-papify.html">papify</a></li>
 				<li><a href="function-the_papi_field.html">the_papi_field</a></li>
 				<li><a href="function-the_papi_option.html">the_papi_option</a></li>
@@ -229,7 +244,7 @@
 		
 		<b>Package:</b> <a href="package-Papi.html">Papi</a><br>
 		<b>Located at</b>
-		<a href="source-function-papi_display_page_type.html#13-47" title="Go to source code">
+		<a href="source-function-papi_display_page_type.html#12-46" title="Go to source code">
 			includes/lib/page.php
 		</a><br>
 	</div>
@@ -264,7 +279,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?6bc31116bf225f9af7b580dc798b3410c38547a0"></script>
-<script src="elementlist.js?e8ff5c70d0f300548200fe9250650d8eb1c1a3a1"></script>
+<script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
+<script src="elementlist.js?13e5076305c143b988364b0ed5a29f01318d1a7b"></script>
 </body>
 </html>
