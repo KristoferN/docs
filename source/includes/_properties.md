@@ -411,14 +411,14 @@ array
   (
     [my_string_slug] => 'Test 1'
     [my_post_slug] => 'WP_Post object',
-    [layout] => 'posts'
+    [_layout] => 'posts'
   )
 
   [1] => array
   (
     [my_title_slug] => 'Test 2'
     [my_image_slug] => 'Image object',
-    [layout] => 'image'
+    [_layout] => 'image'
   )
 )
 ```
