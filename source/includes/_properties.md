@@ -1070,6 +1070,9 @@ papi_property( [
   'title' => 'Name',
   'slug'  => 'my_name_slug',
   'type'  => 'string'
+  'settings' => [
+    'allow_html' => true
+  ]
 ] )
 
 /**
@@ -1085,7 +1088,9 @@ The string property is just a text input field. The value is saved as a string a
 
 ### Settings
 
-No settings exists.
+Key        | Default | Description
+-----------|---------|------------------------------------------------------------
+allow_html | false   | Allow HTML in textarea
 
 ## Text
 
@@ -1123,7 +1128,6 @@ This property will output the textarea tag and the output will be a string with 
 Key        | Default | Description
 -----------|---------|------------------------------------------------------------
 allow_html | false   | Allow HTML in textarea
-
 
 ## Url
 
