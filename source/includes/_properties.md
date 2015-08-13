@@ -1120,9 +1120,9 @@ This property will output the textarea tag and the output will be a string with 
 
 ### Settings
 
-Key      | Default | Description
----------|---------|------------------------------------------------------------
-allow_html    | false   | Allow HTML in textarea
+Key        | Default | Description
+-----------|---------|------------------------------------------------------------
+allow_html | false   | Allow HTML in textarea
 
 
 ## Url
