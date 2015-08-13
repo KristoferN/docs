@@ -1101,7 +1101,10 @@ No settings exists.
 papi_property( [
   'title' => 'Text',
   'slug'  => 'my_text_slug',
-  'type'  => 'text'
+  'type'  => 'text',
+  'settings' => [
+    'allow_html' => true
+  ]
 ] )
 
 /**
@@ -1117,7 +1120,10 @@ This property will output the textarea tag and the output will be a string with 
 
 ### Settings
 
-No settings exists.
+Key      | Default | Description
+---------|---------|------------------------------------------------------------
+allow_html    | false   | Allow HTML in textarea
+
 
 ## Url
 
