@@ -1090,7 +1090,7 @@ The string property is just a text input field. The value is saved as a string a
 
 Key        | Default | Description
 -----------|---------|------------------------------------------------------------
-allow_html | false   | Allow HTML in textarea
+allow_html | false   | Allow HTML in text input field
 
 ## Text
 
