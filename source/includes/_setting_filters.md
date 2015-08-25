@@ -222,9 +222,7 @@ Default value for every page type is `true`
  * Example of `papi/settings/show_standard_page_type_{$post_type}` filter.
  */
 
-add_filter( 'papi/settings/show_standard_page_type_{$post_type}', function () {
-  return false;
-} );
+add_filter( 'papi/settings/show_standard_page_type_page', '__return_false' );
 ```
 
 ### Description
