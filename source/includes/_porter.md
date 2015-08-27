@@ -39,7 +39,10 @@ $post_id = wp_insert_post( [
 ] );
 
 // Import data, will return true or false.
-$result = $porter->import( $post_id, '', [
+$result = $porter->import( [
+  'post_id'   => $post_id,
+  'page_type' => 'article-page-type'
+], [
   'my_string_slug' => 'Hello'
 ] );
 
