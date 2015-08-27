@@ -40,7 +40,7 @@ labels             | no       | With this you can handle the `labels` object tha
 post_type          | no       | Array of post types that the page type should be registered on. Default is `page`
 sort_order         | no       | The sort order number of the page type
 standard_page_type | no       | True or false if standard page type should be displayed on `Add New Page` when `parent_post` query string eixsts. **Since 2.3.0**
-template           | no       | The template file to render
+template           | no       | The template file to render. This can be both dot templates `pages.article` or `pages/article.php`. Extension is not required. Dot templates and extension requirement does only exists in 2.3.0 and above.
 thumbnail          | no       | The thumbnail image that should appear on the add new page
 
 ```javascript
