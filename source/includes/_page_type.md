@@ -30,16 +30,18 @@ class Video_Page_Type extends Papi_Page_Type {
 
 The `page_type` is a required method of the page type class. It should return an array containing the required keys.
 
-Options     | Required | Description
-------------|----------|------------
-name        | yes      | The name of the page type
-description | no       | The description of the page type
-fill_labels | no       | When this is true it will add the page type name to `add_new_item`, `edit_item` and `view_item` label. Both in WordPress admin and the admin bar on the front. You can override this with the `labels` array.
-labels      | no       | With this you can handle the `labels` object that exists on a [post type](http://codex.wordpress.org/Function_Reference/get_post_type_object). So this means that you can change "Add New Page" for every page type and have something like "Add New Startpage". Just create a array with the `labels` keys and values on your page type meta array
-post_type   | no       | Array of post types that the page type should be registered on. Default is `page`
-sort_order  | no       | The sort order number of the page type
-template    | no       | The template file to render
-thumbnail   | no       | The thumbnail image that should apper on the add new page
+Options            | Required | Description
+-------------------|----------|------------
+name               | yes      | The name of the page type
+child_page_types   | no       | Array of page type that will be available when `parent_post` query string exists. **Since 2.3.0**
+description        | no       | The description of the page type
+fill_labels        | no       | When this is true it will add the page type name to `add_new_item`, `edit_item` and `view_item` label. Both in WordPress admin and the admin bar on the front. You can override this with the `labels` array.
+labels             | no       | With this you can handle the `labels` object that exists on a [post type](http://codex.wordpress.org/Function_Reference/get_post_type_object). So this means that you can change "Add New Page" for every page type and have something like `Add New Startpage`. Just create a array with the `labels` keys and values on your page type meta array
+post_type          | no       | Array of post types that the page type should be registered on. Default is `page`
+sort_order         | no       | The sort order number of the page type
+standard_page_type | no       | True or false if standard page type should be displayed on `Add New Page` when `parent_post` query string eixsts. **Since 2.3.0**
+template           | no       | The template file to render
+thumbnail          | no       | The thumbnail image that should appear on the add new page
 
 ```javascript
 /**
