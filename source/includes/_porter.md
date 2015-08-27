@@ -53,7 +53,7 @@ This is a simple example that will import a string value to a new post. The valu
 
 ### Parameters
 
-Parameter    | Default | Required |
+Parameter    | Default | Required | Description
 -------------|---------|----------|------------------------------------------------
 $options     |         | yes      | Array, post or post id (that has a page type id in postmeta table).
 $fields      | array   | no       | If true only the value will be return for fields and not all options.
@@ -154,7 +154,7 @@ The `export` method will return array with box title as key and array of propert
 
 ### Parameters
 
-Parameter    | Default | Required |
+Parameter    | Default | Required | Description
 -------------|---------|----------|------------------------------------------------
 $post_id     |         | yes      |
 $only_values | false   | no       | If true only the value will be return for fields and not all options.
