@@ -86,7 +86,7 @@ public function display( $post_type ) {
 }
 ```
 
-This method is use to tell if the page type should be display or not on `Add new page type` page.
+This method is use to tell if the page type should be display or not on `Add New Page` page.
 
 The method will take a `$post_type` argument. This is useful when the page type is register one more then one post type.
 

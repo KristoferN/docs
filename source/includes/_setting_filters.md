@@ -181,7 +181,7 @@ You can return a string or a array of strings.
 
 Default value is `empty array`.
 
-## Show page type on add new page type view
+## Show page type on add new page view
 
 **filter** `papi/settings/show_page_type_{$post_type}`
 
@@ -203,11 +203,11 @@ add_filter( 'papi/settings/show_page_type_post', function ( $page_type ) {
 
 ### Description
 
-This filter is used to filter which page types that will be displayed or not on `Add new page type` page.
+This filter is used to filter which page types that will be displayed or not on `Add New Page` page.
 
 The function will send in the file name of post types as a argument.
 
-Returning anything else then `true` will hide the page type on `Add new page type` page.
+Returning anything else then `true` will hide the page type on `Add New Page` page.
 
 Default value for every page type is `true`
 
