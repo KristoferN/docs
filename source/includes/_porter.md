@@ -55,7 +55,7 @@ This is a simple example that will import a string value to a new post. The valu
 
 Parameter    | Default | Required |
 -------------|---------|----------|------------------------------------------------
-$options     |         | yes      |
+$options     |         | yes      | Array, post or post id (that has a page type id in postmeta table).
 $fields      | array   | no       | If true only the value will be return for fields and not all options.
 
 ## Drivers
@@ -102,9 +102,9 @@ class Papi_Porter_Driver_Example extends Papi_Porter_Driver {
 	 * @return mixed
 	 */
 	public function get_value( array $options = [] ) {
-    // Do some magic with the value.
-    return $options['value'];
-  }
+		// Do some magic with the value.
+		return $options['value'];
+	}
 }
 ```
 
