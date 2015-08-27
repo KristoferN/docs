@@ -8,6 +8,8 @@
  */
 
 papi_property( [
+  'after_html'   => '',
+  'before_html'  => '',
   'capabilities' => [],
   'description'  => '',
   'disabled'     => false,
@@ -31,15 +33,17 @@ The property type is loaded from the page type file instead of saving it in the 
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
-capabilities | array      | Can be a string with a role or capability or a array with many values
+after_html   | string       | Output html after property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-after-html` and a data attribute with the property type.
+before_html  | string       | Output html before property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-before-html` and a data attribute with the property type.
+capabilities | array        | Can be a string with a role or capability or a array with many values
 description  | empty string | Disable the property, won’t show in WordPress admin
-disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With "\n" you can create new lines in the description
+disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 rules        | array        | [Read more about conditional logic](#conditional_logic)
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
 sidebar      | true         | Boolean that shows the sidebar on each property. If false the sidebar won’t show
-settings     | array      | Array with custom settings for the property
+settings     | array        | Array with custom settings for the property
 sort_order   | 1000         | Numeric value, lowest value in the meta box will be at the top and the highest value at the bottom
 slug         | empty string | The slug of property. If empty or not used the title will be generated to slug value
 title        | empty string | The title of the property. Can be empty for blank title
@@ -1190,46 +1194,46 @@ papi_property( [
  * Example output.
  */
 
-object(WP_User)#327 (7) {
+object( WP_User )//327 (7) {
   ["data"]=>
-  object(stdClass)#323 (10) {
+  object( stdClass )//323 (10) {
     ["ID"]=>
-    string(1) "1"
+    string( 1 ) "1"
     ["user_login"]=>
-    string(5) "admin"
+    string( 5 ) "admin"
     ["user_pass"]=>
-    string(34) ""
+    string( 34 ) ""
     ["user_nicename"]=>
-    string(5) "admin"
+    string( 5 ) "admin"
     ["user_email"]=>
-    string(24) "admin@wordpress.local"
+    string( 24 ) "admin@wordpress.local"
     ["user_url"]=>
-    string(0) ""
+    string( 0 ) ""
     ["user_registered"]=>
-    string(19) "2015-04-19 12:27:23"
+    string( 19 ) "2015-04-19 12:27:23"
     ["user_activation_key"]=>
-    string(0) ""
+    string( 0 ) ""
     ["user_status"]=>
-    string(1) "0"
+    string( 1 ) "0"
     ["display_name"]=>
-    string(14) "Admin Test"
+    string( 14 ) "Admin Test"
   }
   ["ID"]=>
-  int(1)
+  int( 1 )
   ["caps"]=>
-  array(1) {
+  array( 1 ) {
     ["administrator"]=>
-    bool(true)
+    bool( true )
   }
   ["cap_key"]=>
-  string(15) "wp_capabilities"
+  string( 15 ) "wp_capabilities"
   ["roles"]=>
-  array(1) {
+  array( 1 ) {
     [0]=>
-    string(13) "administrator"
+    string( 13 ) "administrator"
   }
   ["allcaps"]=>
-  array(64) {}
+  array( 64 ) {}
   ["filter"]=>
   NULL
 }
