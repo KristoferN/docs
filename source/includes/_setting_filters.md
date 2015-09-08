@@ -181,7 +181,7 @@ You can return a string or a array of strings.
 
 Default value is `empty array`.
 
-## Show page type on add new page type view
+## Show page type on add new page view
 
 **filter** `papi/settings/show_page_type_{$post_type}`
 
@@ -203,11 +203,11 @@ add_filter( 'papi/settings/show_page_type_post', function ( $page_type ) {
 
 ### Description
 
-This filter is used to filter which page types that will be displayed or not on `Add new page type` page.
+This filter is used to filter which page types that will be displayed or not on `Add New Page` page.
 
 The function will send in the file name of post types as a argument.
 
-Returning anything else then `true` will hide the page type on `Add new page type` page.
+Returning anything else then `true` will hide the page type on `Add New Page` page.
 
 Default value for every page type is `true`
 
@@ -227,6 +227,26 @@ add_filter( 'papi/settings/show_standard_page_type_page', '__return_false' );
 
 ### Description
 
-This filter allows you to hide the standard page on the "add new page type" view.
+This filter allows you to hide the standard page on the `Add New Page` view.
+
+Default value for every post type is `true`
+
+## Show standard page type in filter
+
+**filter** `papi/settings/show_standard_page_type_in_filter_{$post_type}`
+
+```php
+<?php
+
+/**
+ * Example of `papi/settings/show_standard_page_type_in_filter_{$post_type}` filter.
+ */
+
+add_filter( 'papi/settings/show_standard_page_type_in_filter_page', '__return_false' );
+```
+
+### Description
+
+This filter allows you to hide the standard page in the dropdown filter on the list page.
 
 Default value for every post type is `true`

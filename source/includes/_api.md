@@ -1,5 +1,21 @@
 # API
 
+## papi_get_page_type_key
+
+```php
+<?php
+
+/**
+ * Example output from `papi_get_page_type` function.
+ */
+
+string '_papi_page_type'
+```
+
+### Description
+
+This function will return the key that Papi uses as key in postmeta for the page type id.
+
 ## papi_get_slugs
 
 ```php
@@ -20,7 +36,7 @@
 
 ### Description
 
-Papi fields will return a array with meta box title as keys and array of all Papi field slugs in that meta box.
+This function will return a array with meta box title as keys and array of all Papi field slugs in that meta box.
 
 ### Parameters
 
