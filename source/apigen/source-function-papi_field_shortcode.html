@@ -47,6 +47,9 @@
 				<li><a href="class-Papi_Page_Type.html">Papi_Page_Type</a></li>
 				<li><a href="class-Papi_Page_Type_Base.html">Papi_Page_Type_Base</a></li>
 				<li><a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a></li>
+				<li><a href="class-Papi_Porter.html">Papi_Porter</a></li>
+				<li><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></li>
+				<li><a href="class-Papi_Porter_Driver_Core.html">Papi_Porter_Driver_Core</a></li>
 				<li><a href="class-Papi_Post_Page.html">Papi_Post_Page</a></li>
 				<li><a href="class-Papi_Property.html">Papi_Property</a></li>
 				<li><a href="class-Papi_Property_Bool.html">Papi_Property_Bool</a></li>
@@ -63,6 +66,7 @@
 				<li><a href="class-Papi_Property_Hidden.html">Papi_Property_Hidden</a></li>
 				<li><a href="class-Papi_Property_Html.html">Papi_Property_Html</a></li>
 				<li><a href="class-Papi_Property_Image.html">Papi_Property_Image</a></li>
+				<li><a href="class-Papi_Property_Link.html">Papi_Property_Link</a></li>
 				<li><a href="class-Papi_Property_Number.html">Papi_Property_Number</a></li>
 				<li><a href="class-Papi_Property_Post.html">Papi_Property_Post</a></li>
 				<li><a href="class-Papi_Property_Radio.html">Papi_Property_Radio</a></li>
@@ -87,6 +91,8 @@
 				<li><a href="function-papi_action_include.html">papi_action_include</a></li>
 				<li><a href="function-papi_append_post_type_query.html">papi_append_post_type_query</a></li>
 				<li><a href="function-papi_body_class.html">papi_body_class</a></li>
+				<li><a href="function-papi_camel_case.html">papi_camel_case</a></li>
+				<li><a href="function-papi_cast_string_value.html">papi_cast_string_value</a></li>
 				<li><a href="function-papi_convert_to_string.html">papi_convert_to_string</a></li>
 				<li><a href="function-papi_current_user_is_allowed.html">papi_current_user_is_allowed</a></li>
 				<li><a href="function-papi_dashify.html">papi_dashify</a></li>
@@ -107,9 +113,9 @@
 				<li><a href="function-papi_filter_settings_directories.html">papi_filter_settings_directories</a></li>
 				<li><a href="function-papi_filter_settings_only_page_type.html">papi_filter_settings_only_page_type</a></li>
 				<li><a href="function-papi_filter_settings_page_type_column_title.html">papi_filter_settings_page_type_column_title</a></li>
-				<li><a href="function-papi_filter_settings_page_type_from_post_qs.html">papi_filter_settings_page_type_from_post_qs</a></li>
 				<li><a href="function-papi_filter_settings_show_page_type.html">papi_filter_settings_show_page_type</a></li>
 				<li><a href="function-papi_filter_settings_show_standard_page_type.html">papi_filter_settings_show_standard_page_type</a></li>
+				<li><a href="function-papi_filter_settings_show_standard_page_type_in_filter.html">papi_filter_settings_show_standard_page_type_in_filter</a></li>
 				<li><a href="function-papi_filter_settings_sort_order.html">papi_filter_settings_sort_order</a></li>
 				<li><a href="function-papi_filter_settings_standard_page_description.html">papi_filter_settings_standard_page_description</a></li>
 				<li><a href="function-papi_filter_settings_standard_page_name.html">papi_filter_settings_standard_page_name</a></li>
@@ -137,11 +143,14 @@
 				<li><a href="function-papi_get_page_type_by_id.html">papi_get_page_type_by_id</a></li>
 				<li><a href="function-papi_get_page_type_by_post_id.html">papi_get_page_type_by_post_id</a></li>
 				<li><a href="function-papi_get_page_type_id.html">papi_get_page_type_id</a></li>
-				<li><a href="function-papi_get_page_type_meta_value.html">papi_get_page_type_meta_value</a></li>
+				<li><a href="function-papi_get_page_type_key.html">papi_get_page_type_key</a></li>
+				<li><a href="function-papi_get_page_type_meta_value.html" class="deprecated">papi_get_page_type_meta_value</a></li>
 				<li><a href="function-papi_get_page_type_name.html">papi_get_page_type_name</a></li>
 				<li><a href="function-papi_get_page_type_template.html">papi_get_page_type_template</a></li>
+				<li><a href="function-papi_get_parent_post_id.html">papi_get_parent_post_id</a></li>
 				<li><a href="function-papi_get_post_id.html">papi_get_post_id</a></li>
 				<li><a href="function-papi_get_post_type.html">papi_get_post_type</a></li>
+				<li><a href="function-papi_get_post_type_label.html">papi_get_post_type_label</a></li>
 				<li><a href="function-papi_get_post_types.html">papi_get_post_types</a></li>
 				<li><a href="function-papi_get_property_class_name.html">papi_get_property_class_name</a></li>
 				<li><a href="function-papi_get_property_meta_value.html">papi_get_property_meta_value</a></li>
@@ -160,12 +169,16 @@
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
+				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
+				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
 				<li><a href="function-papi_is_property.html">papi_is_property</a></li>
 				<li><a href="function-papi_is_property_type_key.html">papi_is_property_type_key</a></li>
 				<li><a href="function-papi_is_rule.html">papi_is_rule</a></li>
 				<li><a href="function-papi_management_page_type_render_box.html">papi_management_page_type_render_box</a></li>
 				<li><a href="function-papi_nl2br.html">papi_nl2br</a></li>
 				<li><a href="function-papi_option_shortcode.html">papi_option_shortcode</a></li>
+				<li><a href="function-papi_option_type_exists.html">papi_option_type_exists</a></li>
+				<li><a href="function-papi_page_type_exists.html">papi_page_type_exists</a></li>
 				<li><a href="function-papi_populate_properties.html">papi_populate_properties</a></li>
 				<li><a href="function-papi_property.html">papi_property</a></li>
 				<li><a href="function-papi_remove_papi.html">papi_remove_papi</a></li>
@@ -177,6 +190,7 @@
 				<li><a href="function-papi_required_html.html">papi_required_html</a></li>
 				<li><a href="function-papi_rule.html">papi_rule</a></li>
 				<li><a href="function-papi_santize_data.html">papi_santize_data</a></li>
+				<li><a href="function-papi_set_page_type_id.html">papi_set_page_type_id</a></li>
 				<li><a href="function-papi_setup_tabs.html">papi_setup_tabs</a></li>
 				<li><a href="function-papi_slugify.html">papi_slugify</a></li>
 				<li><a href="function-papi_sort_order.html">papi_sort_order</a></li>
@@ -185,10 +199,12 @@
 				<li><a href="function-papi_template_include.html">papi_template_include</a></li>
 				<li><a href="function-papi_to_array.html">papi_to_array</a></li>
 				<li><a href="function-papi_to_property_array_slugs.html">papi_to_property_array_slugs</a></li>
+				<li><a href="function-papi_translate_keys.html">papi_translate_keys</a></li>
 				<li><a href="function-papi_underscorify.html">papi_underscorify</a></li>
 				<li><a href="function-papi_update_field.html">papi_update_field</a></li>
 				<li><a href="function-papi_update_option.html">papi_update_option</a></li>
 				<li><a href="function-papi_update_property_meta_value.html">papi_update_property_meta_value</a></li>
+				<li><a href="function-papi_with.html">papi_with</a></li>
 				<li><a href="function-papify.html">papify</a></li>
 				<li><a href="function-the_papi_field.html">the_papi_field</a></li>
 				<li><a href="function-the_papi_option.html">the_papi_option</a></li>
@@ -236,9 +252,9 @@
 </span><span id="12" class="l"><a href="#12"> 12: </a><span class="php-comment">/**
 </span></span><span id="13" class="l"><a href="#13"> 13: </a><span class="php-comment"> * Delete value in the database.
 </span></span><span id="14" class="l"><a href="#14"> 14: </a><span class="php-comment"> *
-</span></span><span id="15" class="l"><a href="#15"> 15: </a><span class="php-comment"> * @param int $post_id
-</span></span><span id="16" class="l"><a href="#16"> 16: </a><span class="php-comment"> * @param string $slug
-</span></span><span id="17" class="l"><a href="#17"> 17: </a><span class="php-comment"> * @param string $type
+</span></span><span id="15" class="l"><a href="#15"> 15: </a><span class="php-comment"> * @param  int    $post_id
+</span></span><span id="16" class="l"><a href="#16"> 16: </a><span class="php-comment"> * @param  string $slug
+</span></span><span id="17" class="l"><a href="#17"> 17: </a><span class="php-comment"> * @param  string $type
 </span></span><span id="18" class="l"><a href="#18"> 18: </a><span class="php-comment"> *
 </span></span><span id="19" class="l"><a href="#19"> 19: </a><span class="php-comment"> * @return bool
 </span></span><span id="20" class="l"><a href="#20"> 20: </a><span class="php-comment"> */</span>
@@ -283,7 +299,7 @@
 </span></span><span id="59" class="l"><a href="#59"> 59: </a><span class="php-comment"> *
 </span></span><span id="60" class="l"><a href="#60"> 60: </a><span class="php-comment"> * [papi_field id=1 slug=&quot;field_name&quot; default=&quot;Default value&quot;][/papi_field]
 </span></span><span id="61" class="l"><a href="#61"> 61: </a><span class="php-comment"> *
-</span></span><span id="62" class="l"><a href="#62"> 62: </a><span class="php-comment"> * @param array $atts
+</span></span><span id="62" class="l"><a href="#62"> 62: </a><span class="php-comment"> * @param  array $atts
 </span></span><span id="63" class="l"><a href="#63"> 63: </a><span class="php-comment"> *
 </span></span><span id="64" class="l"><a href="#64"> 64: </a><span class="php-comment"> * @return mixed
 </span></span><span id="65" class="l"><a href="#65"> 65: </a><span class="php-comment"> */</span>
@@ -314,9 +330,9 @@
 </span></span><span id="90" class="l"><a href="#90"> 90: </a><span class="php-comment"> *
 </span></span><span id="91" class="l"><a href="#91"> 91: </a><span class="php-comment"> * &quot;image.url&quot; will get the url value in the array.
 </span></span><span id="92" class="l"><a href="#92"> 92: </a><span class="php-comment"> *
-</span></span><span id="93" class="l"><a href="#93"> 93: </a><span class="php-comment"> * @param array $slugs
-</span></span><span id="94" class="l"><a href="#94"> 94: </a><span class="php-comment"> * @param mixed $value
-</span></span><span id="95" class="l"><a href="#95"> 95: </a><span class="php-comment"> * @param mixed $default
+</span></span><span id="93" class="l"><a href="#93"> 93: </a><span class="php-comment"> * @param  array $slugs
+</span></span><span id="94" class="l"><a href="#94"> 94: </a><span class="php-comment"> * @param  mixed $value
+</span></span><span id="95" class="l"><a href="#95"> 95: </a><span class="php-comment"> * @param  mixed $default
 </span></span><span id="96" class="l"><a href="#96"> 96: </a><span class="php-comment"> *
 </span></span><span id="97" class="l"><a href="#97"> 97: </a><span class="php-comment"> * @return mixed
 </span></span><span id="98" class="l"><a href="#98"> 98: </a><span class="php-comment"> */</span>
@@ -344,10 +360,10 @@
 </span><span id="120" class="l"><a href="#120">120: </a><span class="php-comment">/**
 </span></span><span id="121" class="l"><a href="#121">121: </a><span class="php-comment"> * Get value for a property on a page.
 </span></span><span id="122" class="l"><a href="#122">122: </a><span class="php-comment"> *
-</span></span><span id="123" class="l"><a href="#123">123: </a><span class="php-comment"> * @param int $post_id
-</span></span><span id="124" class="l"><a href="#124">124: </a><span class="php-comment"> * @param string $slug
-</span></span><span id="125" class="l"><a href="#125">125: </a><span class="php-comment"> * @param mixed $default
-</span></span><span id="126" class="l"><a href="#126">126: </a><span class="php-comment"> * @param string $type
+</span></span><span id="123" class="l"><a href="#123">123: </a><span class="php-comment"> * @param  int    $post_id
+</span></span><span id="124" class="l"><a href="#124">124: </a><span class="php-comment"> * @param  string $slug
+</span></span><span id="125" class="l"><a href="#125">125: </a><span class="php-comment"> * @param  mixed  $default
+</span></span><span id="126" class="l"><a href="#126">126: </a><span class="php-comment"> * @param  string $type
 </span></span><span id="127" class="l"><a href="#127">127: </a><span class="php-comment"> *
 </span></span><span id="128" class="l"><a href="#128">128: </a><span class="php-comment"> * @return mixed
 </span></span><span id="129" class="l"><a href="#129">129: </a><span class="php-comment"> */</span>
@@ -400,9 +416,9 @@
 </span><span id="176" class="l"><a href="#176">176: </a><span class="php-comment">/**
 </span></span><span id="177" class="l"><a href="#177">177: </a><span class="php-comment"> * Update field with new value. The old value will be deleted.
 </span></span><span id="178" class="l"><a href="#178">178: </a><span class="php-comment"> *
-</span></span><span id="179" class="l"><a href="#179">179: </a><span class="php-comment"> * @param int $post_id
-</span></span><span id="180" class="l"><a href="#180">180: </a><span class="php-comment"> * @param string $slug
-</span></span><span id="181" class="l"><a href="#181">181: </a><span class="php-comment"> * @param string $type
+</span></span><span id="179" class="l"><a href="#179">179: </a><span class="php-comment"> * @param  int    $post_id
+</span></span><span id="180" class="l"><a href="#180">180: </a><span class="php-comment"> * @param  string $slug
+</span></span><span id="181" class="l"><a href="#181">181: </a><span class="php-comment"> * @param  string $type
 </span></span><span id="182" class="l"><a href="#182">182: </a><span class="php-comment"> *
 </span></span><span id="183" class="l"><a href="#183">183: </a><span class="php-comment"> * @return bool
 </span></span><span id="184" class="l"><a href="#184">184: </a><span class="php-comment"> */</span>
@@ -418,7 +434,7 @@
 </span><span id="194" class="l"><a href="#194">194: </a>    }
 </span><span id="195" class="l"><a href="#195">195: </a>
 </span><span id="196" class="l"><a href="#196">196: </a>    <span class="php-keyword1">if</span> ( papi_is_empty( <span class="php-var">$value</span> ) ) {
-</span><span id="197" class="l"><a href="#197">197: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">false</span>;
+</span><span id="197" class="l"><a href="#197">197: </a>        <span class="php-keyword1">return</span> papi_delete_field( <span class="php-var">$post_id</span>, <span class="php-var">$slug</span>, <span class="php-var">$type</span> );
 </span><span id="198" class="l"><a href="#198">198: </a>    }
 </span><span id="199" class="l"><a href="#199">199: </a>
 </span><span id="200" class="l"><a href="#200">200: </a>    <span class="php-var">$post_id</span> = papi_get_post_id( <span class="php-var">$post_id</span> );
@@ -454,9 +470,9 @@
 </span><span id="230" class="l"><a href="#230">230: </a><span class="php-comment">/**
 </span></span><span id="231" class="l"><a href="#231">231: </a><span class="php-comment"> * Echo the value for property on a page.
 </span></span><span id="232" class="l"><a href="#232">232: </a><span class="php-comment"> *
-</span></span><span id="233" class="l"><a href="#233">233: </a><span class="php-comment"> * @param int $post_id
+</span></span><span id="233" class="l"><a href="#233">233: </a><span class="php-comment"> * @param int    $post_id
 </span></span><span id="234" class="l"><a href="#234">234: </a><span class="php-comment"> * @param string $slug
-</span></span><span id="235" class="l"><a href="#235">235: </a><span class="php-comment"> * @param mixed $default
+</span></span><span id="235" class="l"><a href="#235">235: </a><span class="php-comment"> * @param mixed  $default
 </span></span><span id="236" class="l"><a href="#236">236: </a><span class="php-comment"> */</span>
 </span><span id="237" class="l"><a href="#237">237: </a><span class="php-keyword1">function</span> the_papi_field( <span class="php-var">$post_id</span> = <span class="php-keyword1">null</span>, <span class="php-var">$slug</span> = <span class="php-keyword1">null</span>, <span class="php-var">$default</span> = <span class="php-keyword1">null</span> ) {
 </span><span id="238" class="l"><a href="#238">238: </a>    <span class="php-var">$value</span> = papi_get_field( <span class="php-var">$post_id</span>, <span class="php-var">$slug</span>, <span class="php-var">$default</span> );
@@ -475,6 +491,6 @@
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?13e5076305c143b988364b0ed5a29f01318d1a7b"></script>
+<script src="elementlist.js?a35b28ed1fb15e6881aa6e347f6e72a395a9f073"></script>
 </body>
 </html>
