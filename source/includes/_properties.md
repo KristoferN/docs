@@ -216,12 +216,6 @@ papi_property( [
   'type'        => 'divider',
   'description' => 'Non volutpat ultricies bibendum odio luctus.'
 ] )
-
-/**
- * Example output.
- */
-
-string '#ffffff'
 ```
 
 ### Description
