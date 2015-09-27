@@ -15,6 +15,7 @@ papi_property( [
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
+  'overwrite'    => false,
   'raw'          => false,
   'required'     => false,
   'rules'        => [],
@@ -41,6 +42,7 @@ default      | empty string | The default value that should be used when value i
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
+overwrite    | false        | When property is used on post page you can overwrite post object properties with property value when `overwrite` is true.
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 rules        | array        | [Read more about conditional logic](#conditional_logic)
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
