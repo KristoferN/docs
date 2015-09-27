@@ -227,9 +227,9 @@ add_filter( 'papi/settings/show_standard_page_type_page', '__return_false' );
 
 ### Description
 
-This filter allows you to hide the standard page on the `Add New Page` view.
+This filter allows you to show (**since 2.4.0** standard page is hidden by default) the standard page on the `Add New Page` view.
 
-Default value for every post type is `true`
+Default value for every post type is `false`
 
 ## Show standard page type in filter
 
@@ -247,6 +247,6 @@ add_filter( 'papi/settings/show_standard_page_type_in_filter_page', '__return_fa
 
 ### Description
 
-This filter allows you to hide the standard page in the dropdown filter on the list page.
+This filter allows you to show (**since 2.4.0** standard page is hidden by default) the standard page in the dropdown filter on the list page.
 
-Default value for every post type is `true`
+Default value for every post type is `false`

@@ -11,6 +11,7 @@ papi_property( [
   'after_html'   => '',
   'before_html'  => '',
   'capabilities' => [],
+  'default'      => '',
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
@@ -35,7 +36,8 @@ Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
 after_html   | string       | Output html after property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-after-html` and a data attribute with the property type. **Since 2.3.0**
 before_html  | string       | Output html before property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-before-html` and a data attribute with the property type. **Since 2.3.0**
-capabilities | array        | Can be a string with a role or capability or a array with many values
+capabilities | array        | Can be a string with a role or capability or a array with many values.
+default      | empty string | The default value that should be used when value is empty.
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
 lang         | false        | When using this key you can specify which language will show the property
@@ -216,6 +218,12 @@ papi_property( [
   'type'        => 'divider',
   'description' => 'Non volutpat ultricies bibendum odio luctus.'
 ] )
+
+/**
+ * Example output.
+ */
+
+string '#ffffff'
 ```
 
 ### Description
@@ -935,6 +943,7 @@ With this property you can link posts, pages or custom post types together. With
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
 limit        | -1 (no limit) | Prevent how many post references that can be added.
+only_once    | false         | When this is true you can only select a relationship once.
 post_type    | 'page'        | Change which post types it loads post objects from
 query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
