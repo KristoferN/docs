@@ -596,7 +596,7 @@ papi_property( [
 
 /**
  * Example output.
- * The reference property does not save any values.
+ * The html property does not save any values.
  */
 ```
 
@@ -685,6 +685,44 @@ stdClass Object
 With this property you can add a image from the WordPress media library.
 
 ![Image example](/images/docs/property-image.png)
+
+### Settings
+
+No settings exists.
+
+## Link
+
+**type** `link`
+
+```php
+<?php
+
+/**
+ * Example of link.
+ */
+
+papi_property( [
+  'title' => 'Link',
+  'type'  => 'link'
+] )
+
+/**
+ * Example output.
+ */
+
+object(stdClass)#4533 (3) {
+  ["url"]=>
+  string(12) "http://dn.se"
+  ["title"]=>
+  string(2) "DN"
+  ["target"]=>
+  string(0) ""
+}
+```
+
+### Description
+
+Create a link using the editors link modal window.
 
 ### Settings
 
