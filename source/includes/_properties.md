@@ -948,11 +948,37 @@ With this property you can link posts, pages or custom post types together. With
 
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
+items        | array         | Array of items that should be listed in the relationship. You can use this to have your own data in the relationship property. Each item in the array is required to have `id` and `title` values. All sort options that begins with `Post` will be hidden. **Since 2.4.0**
 limit        | -1 (no limit) | Prevent how many post references that can be added.
 only_once    | false         | When this is true you can only select a relationship once. **Since 2.4.0**
 post_type    | 'page'        | Change which post types it loads post objects from
-query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query        | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
+
+### Items data
+
+```php
+<?php
+
+/**
+ * Example of custom data in relationship.
+ */
+
+$categories = array_map( function ( $cat ) {
+  return [
+    'id'    => (int) $cat->term_id,
+    'title' => $cat->name
+  ];
+}, get_categories() );
+
+papi_property( [
+  'title'    => 'Categories'
+  'type'     => 'relationship',
+  'settings' => [
+    'items' => $categories
+  ]
+] )
+```
 
 ### Filters
 
@@ -966,7 +992,11 @@ show_sort_by | true          | Show the sort by dropdown or not.
 add_filter( 'papi/property/relationship/sort_options', function ( $not_allowed ) {
   return array_merge( $not_allowed, [
     'Name (alphabetically)' => function ( $a, $b ) {
-      return strcmp( strtolower( $a->post_title ), strtolower( $b->post_title ) );
+      // Backwards compatibility with both `post_title` and `title`.
+			return strcmp(
+				strtolower( isset( $a->post_title ) ? $a->post_title : $a->title ),
+				strtolower( isset( $b->post_title ) ? $b->post_title : $b->title )
+			);
     }
   ] );
 } );
