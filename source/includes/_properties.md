@@ -8,7 +8,9 @@
  */
 
 papi_property( [
+  'after_class'  => '',
   'after_html'   => '',
+  'before_class' => '',
   'before_html'  => '',
   'capabilities' => [],
   'default'      => '',
@@ -35,7 +37,9 @@ The property type is loaded from the page type file instead of saving it in the 
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
+after_class  | string       | Add custom css class to after div. **Since 2.4.0**
 after_html   | string       | Output html after property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-after-html` and a data attribute with the property type. **Since 2.3.0**
+after_class  | string       | Add custom css class to before div. **Since 2.4.0**
 before_html  | string       | Output html before property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-before-html` and a data attribute with the property type. **Since 2.3.0**
 capabilities | array        | Can be a string with a role or capability or a array with many values.
 default      | empty string | The default value that should be used when value is empty.
