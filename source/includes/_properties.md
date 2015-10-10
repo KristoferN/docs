@@ -949,7 +949,7 @@ With this property you can link posts, pages or custom post types together. With
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
 limit        | -1 (no limit) | Prevent how many post references that can be added.
-only_once    | false         | When this is true you can only select a relationship once.
+only_once    | false         | When this is true you can only select a relationship once. **Since 2.4.0**
 post_type    | 'page'        | Change which post types it loads post objects from
 query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
