@@ -36,8 +36,8 @@ Key          | Default      | Description
 after_html   | string       | Output html after property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-after-html` and a data attribute with the property type. **Since 2.3.0**
 before_html  | string       | Output html before property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-before-html` and a data attribute with the property type. **Since 2.3.0**
 capabilities | array        | Can be a string with a role or capability or a array with many values
-description  | empty string | Disable the property, won’t show in WordPress admin
-disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
+description  | empty string | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
+disabled     | false        | Disable the property, won’t show in WordPress admin
 lang         | false        | When using this key you can specify which language will show the property
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 rules        | array        | [Read more about conditional logic](#conditional_logic)
