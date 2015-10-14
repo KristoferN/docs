@@ -45,6 +45,7 @@ capabilities | array        | Can be a string with a role or capability or a arr
 default      | empty string | The default value that should be used when value is empty.
 description  | empty string | Disable the property, won’t show in WordPress admin
 disabled     | false        | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
+display      | true         | When using this key you can hide the property being displayed, it will have the class `papi-hide`. Flexible and repeater will hide the property when value is false and not the row.
 lang         | false        | When using this key you can specify which language will show the property
 overwrite    | false        | When property is used on post page you can overwrite post object properties with property value when `overwrite` is true.
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
