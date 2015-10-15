@@ -1,6 +1,8 @@
 # Conditional logic
 
-**Since version 2.2.0** Papi has conditional logic for properties. So you can show or hide a field depending on the value of other fields.
+**Since 2.2.0** Papi has conditional logic for properties. So you can show or hide a field depending on the value of other fields.
+
+**Since 2.4.0** When a property has `display => false` conditional logic will not have any impact on the property.
 
 The example on the right will hide `Link` field since `Show` field is `false` when you load the page. When you click the `Show` it will do ajax call and check if `Link` field should be showed or not depending on the value of `Show`.
 

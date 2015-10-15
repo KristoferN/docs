@@ -15,7 +15,7 @@ class Video_Page_Type extends Papi_Page_Type {
    * @return array
    */
 
-  public function page_type() {
+  public function meta() {
     return [
       'name'        => 'Video page',
       'description' => 'A page where you can embed videos',
@@ -26,9 +26,11 @@ class Video_Page_Type extends Papi_Page_Type {
 }
 ```
 
-### page_type method
+### meta method
 
-The `page_type` is a required method of the page type class. It should return an array containing the required keys.
+The `meta` is a required method of the page type class. It should return an array containing the required keys.
+
+**Since 2.4.0** the method is called `meta` the old `page_type` method will still work but is deprecated and not recommended to use.
 
 Options            | Required | Description
 -------------------|----------|------------

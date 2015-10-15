@@ -15,7 +15,7 @@ class Header_Option_Type extends Papi_Option_Type {
    * @return array
    */
 
-  public function option_type() {
+  public function meta() {
     return [
       'menu' => 'options-general.php',
       'name' => 'Header'
@@ -32,9 +32,11 @@ Option type class extends the [page type class](#page-type) so you can create op
 - Does not save the option type id in the database since options don't have a post id. So you can't have different option types that has the same property slug.
 - The `page_type` method is named `option_type`.
 
-### option_type method
+### meta method
 
 The `option_type` is a required method of the option type class. It should return an array containing the required keys.
+
+**Since 2.4.0** the method is called `meta` the old `option_type` method will still work but is deprecated and not recommended to use.
 
 Options    | Required | Description
 -----------|----------|------------

@@ -8,12 +8,16 @@
  */
 
 papi_property( [
+  'after_class'  => '',
   'after_html'   => '',
+  'before_class' => '',
   'before_html'  => '',
   'capabilities' => [],
+  'default'      => '',
   'description'  => '',
   'disabled'     => false,
   'lang'         => false,
+  'overwrite'    => false,
   'raw'          => false,
   'required'     => false,
   'rules'        => [],
@@ -33,12 +37,17 @@ The property type is loaded from the page type file instead of saving it in the 
 
 Key          | Default      | Description
 -------------|--------------|---------------------------------------------------
+after_class  | string       | Add custom css class to after div. **Since 2.4.0**
 after_html   | string       | Output html after property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-after-html` and a data attribute with the property type. **Since 2.3.0**
+after_class  | string       | Add custom css class to before div. **Since 2.4.0**
 before_html  | string       | Output html before property html. Can be a html string or a callable function. Will be wrapped in a div with class `papi-before-html` and a data attribute with the property type. **Since 2.3.0**
 capabilities | array        | Can be a string with a role or capability or a array with many values
+default      | empty string | The default value that should be used when value is empty.
 description  | empty string | The introduction text that will appear below the title text of the property. You could write your help text here. With `\n` you can create new lines in the description
 disabled     | false        | Disable the property, won’t show in WordPress admin
+display      | true         | When using this key you can hide the property being displayed, it will have the class `papi-hide`. Flexible and repeater will hide the property when value is false and not the row. When false will it override conditional logic. **Since 2.4.0**
 lang         | false        | When using this key you can specify which language will show the property
+overwrite    | false        | When property is used on post page you can overwrite post object properties with property value when `overwrite` is true.
 raw          | false        | This will render the property without a table, good to use when creating a custom property that uses other properties
 rules        | array        | [Read more about conditional logic](#conditional-logic)
 required     | false        | By default all fields are non required in Papi but this can be changed with required option
@@ -216,6 +225,12 @@ papi_property( [
   'type'        => 'divider',
   'description' => 'Non volutpat ultricies bibendum odio luctus.'
 ] )
+
+/**
+ * Example output.
+ */
+
+string '#ffffff'
 ```
 
 ### Description
@@ -972,10 +987,37 @@ With this property you can link posts, pages or custom post types together. With
 
 Key          | Default       | Description
 -------------|---------------|--------------------------------------------------
+items        | array         | Array of items that should be listed in the relationship. You can use this to have your own data in the relationship property. Each item in the array is required to have `id` and `title` values. All sort options that begins with `Post` will be hidden. **Since 2.4.0**
 limit        | -1 (no limit) | Prevent how many post references that can be added.
+only_once    | false         | When this is true you can only select a relationship once. **Since 2.4.0**
 post_type    | 'page'        | Change which post types it loads post objects from
-query        | array       | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
+query        | array         | Append a `WP_Query` on all post types. Gist reference over `WP_Query`. Note that `post_type` in query will always be removed
 show_sort_by | true          | Show the sort by dropdown or not.
+
+### Items data
+
+```php
+<?php
+
+/**
+ * Example of custom data in relationship.
+ */
+
+$categories = array_map( function ( $cat ) {
+  return [
+    'id'    => (int) $cat->term_id,
+    'title' => $cat->name
+  ];
+}, get_categories() );
+
+papi_property( [
+  'title'    => 'Categories'
+  'type'     => 'relationship',
+  'settings' => [
+    'items' => $categories
+  ]
+] )
+```
 
 ### Filters
 
@@ -989,7 +1031,11 @@ show_sort_by | true          | Show the sort by dropdown or not.
 add_filter( 'papi/property/relationship/sort_options', function ( $not_allowed ) {
   return array_merge( $not_allowed, [
     'Name (alphabetically)' => function ( $a, $b ) {
-      return strcmp( strtolower( $a->post_title ), strtolower( $b->post_title ) );
+      // Backwards compatibility with both `post_title` and `title`.
+			return strcmp(
+				strtolower( isset( $a->post_title ) ? $a->post_title : $a->title ),
+				strtolower( isset( $b->post_title ) ? $b->post_title : $b->title )
+			);
     }
   ] );
 } );
@@ -1127,6 +1173,58 @@ The string property is just a text input field. The value is saved as a string a
 Key        | Default | Description
 -----------|---------|------------------------------------------------------------
 allow_html | false   | Allow HTML in text input field
+
+## Term
+
+**type** `object`
+
+```php
+<?php
+
+/**
+ * Example of term.
+ */
+
+papi_property( [
+  'title'    => 'Term',
+  'slug'     => 'my_term_slug',
+  'type'     => 'term',
+  'settings  => [
+  	'taxonomy' => 'my_taxonomy'
+  ]
+] )
+
+/**
+ * Example output.
+ */
+
+stdClass Object
+(
+    [term_id] => '123'
+    [name] => 'The term'
+    [slug] => 'the_term'
+    [term_group] => '0'
+    [term_order] => '0'
+    [term_taxonomy_id] => '321'
+    [taxonomy] => 'my_taxonomy'
+    [description] => ''
+    [parent] => '0'
+    [count] => '0'
+    [object_id] => ''
+)
+```
+
+### Description
+
+With this property you can add reference to a term in a taxonomy. It can't handle multiple terms or taxonomies.
+
+### Settings
+
+Key           | Default       | Description
+--------------|---------------|--------------------------------------------------
+placeholder   | null          | Placeholder text that's displayed when no option is slected.
+taxonomy      | 'post'        | The taxonomy that the property will load terms from. Can only be one taxonomy.
+select2       | true          | If true Select2 will be used, if false the native browser dropdown will be used.
 
 ## Text
 
