@@ -438,7 +438,7 @@ array
 
 ### Description
 
-The flexible property can create a repeater with different layouts that contains sub fields. That's the big different from a [repeater property](#repeater). You can't have a flexible or repeater in a repeater.
+The flexible property can create a repeater with different layouts that contains sub fields. That's the big different from a [repeater property](#repeater). You can't have a flexible or repeater in a flexible.
 
 ![Flexible example](/images/docs/property-flexible.png)
 
