@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,9 @@
 
 
 	<div class="description">
-	<p>Papi Attachment Type class.</p>
+	<p>Papi type that handle attachment post type, post data
+and rendering. All attachment types should extend this
+class.</p>
 	</div>
 
 	<dl class="tree">
@@ -299,7 +301,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Attachment_Type.html#3-104" title="Go to source code">types/class-papi-attachment-type.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Attachment_Type.html#3-106" title="Go to source code">types/class-papi-attachment-type.php</a>
 		<br>
 	</div>
 
@@ -319,7 +321,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_post_type">#</a>
-		<code><a href="source-class-Papi_Attachment_Type.html#15-22" title="Go to source code">get_post_type</a>( )</code>
+		<code><a href="source-class-Papi_Attachment_Type.html#17-24" title="Go to source code">get_post_type</a>( )</code>
 
 		<div class="description short">
 			<p>Get post type.</p>
@@ -355,7 +357,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setup_filters">#</a>
-		<code><a href="source-class-Papi_Attachment_Type.html#24-33" title="Go to source code">setup_filters</a>( )</code>
+		<code><a href="source-class-Papi_Attachment_Type.html#26-35" title="Go to source code">setup_filters</a>( )</code>
 
 		<div class="description short">
 			<p>Setup filters.</p>
@@ -387,7 +389,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_edit_attachment">#</a>
-		<code><a href="source-class-Papi_Attachment_Type.html#35-88" title="Go to source code">edit_attachment</a>( <span>array <var>$form_fields</var></span>, <span>WP_Post <var>$post</var></span> )</code>
+		<code><a href="source-class-Papi_Attachment_Type.html#37-90" title="Go to source code">edit_attachment</a>( <span>array <var>$form_fields</var></span>, <span>WP_Post <var>$post</var></span> )</code>
 
 		<div class="description short">
 			<p>Add attachment fields.</p>
@@ -428,7 +430,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_save_attachment">#</a>
-		<code><a href="source-class-Papi_Attachment_Type.html#90-103" title="Go to source code">save_attachment</a>( <span>array <var>$post</var></span>, <span>array <var>$attachment</var></span> )</code>
+		<code><a href="source-class-Papi_Attachment_Type.html#92-105" title="Go to source code">save_attachment</a>( <span>array <var>$post</var></span>, <span>array <var>$attachment</var></span> )</code>
 
 		<div class="description short">
 			<p>Save attachment post data.</p>
@@ -526,7 +528,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Attachment_Type.html#8-13" title="Go to source code"><var>$post_type</var></a>
+				<a href="source-class-Papi_Attachment_Type.html#10-15" title="Go to source code"><var>$post_type</var></a>
 
 			<div class="description short">
 				<p>The post type to register the type with.</p>

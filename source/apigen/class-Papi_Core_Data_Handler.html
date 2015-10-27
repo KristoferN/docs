@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Papi_Admin_Data_Handler</title>
+	<title>Class Papi_Core_Data_Handler</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li class="active"><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li class="active"><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -250,11 +250,11 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Papi_Admin_Data_Handler</h1>
+	<h1>Class Papi_Core_Data_Handler</h1>
 
 
 	<div class="description">
-	<p>Papi Data Handler class.</p>
+	<p>Core class that handle core post data.</p>
 	</div>
 
 
@@ -276,7 +276,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Admin_Data_Handler.html#3-182" title="Go to source code">admin/class-papi-admin-data-handler.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Core_Data_Handler.html#3-182" title="Go to source code">core/class-papi-core-data-handler.php</a>
 		<br>
 	</div>
 
@@ -296,7 +296,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_decode_property">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#15-30" title="Go to source code">decode_property</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#15-30" title="Go to source code">decode_property</a>( <span>string <var>$key</var></span>, <span>string <var>$value</var></span> )</code>
 
 		<div class="description short">
 			<p>Decode property.</p>
@@ -337,7 +337,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_post_data">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#32-59" title="Go to source code">get_post_data</a>( <span>string <var>$pattern</var> = <span class="php-quote">'/^papi\_.*/'</span> </span> )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#32-59" title="Go to source code">get_post_data</a>( <span>string <var>$pattern</var> = <span class="php-quote">'/^papi\_.*/'</span> </span> )</code>
 
 		<div class="description short">
 			<p>Get post data.</p>
@@ -376,7 +376,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_pre_deep_keys_value">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#61-87" title="Go to source code">get_pre_deep_keys_value</a>( <span>array <var>$arr</var></span> )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#61-87" title="Go to source code">get_pre_deep_keys_value</a>( <span>array <var>$arr</var></span> )</code>
 
 		<div class="description short">
 			<p>Pre get deep keys and value.</p>
@@ -417,7 +417,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prepare_post_data">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#89-111" title="Go to source code">prepare_post_data</a>( <span>mixed <var>$data</var></span> )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#89-111" title="Go to source code">prepare_post_data</a>( <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			<p>Prepare post data.
@@ -458,7 +458,7 @@ Will decode property options recursive.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prepare_properties_data">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#113-174" title="Go to source code">prepare_properties_data</a>( <span>array <var>$data</var> = []</span>, <span>integer <var>$post_id</var> = <span class="php-num">0</span> </span> )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#113-174" title="Go to source code">prepare_properties_data</a>( <span>array <var>$data</var> = []</span>, <span>integer <var>$post_id</var> = <span class="php-num">0</span> </span> )</code>
 
 		<div class="description short">
 			<p>Prepare properties data for saving.</p>
@@ -499,7 +499,7 @@ Will decode property options recursive.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_pre_data">#</a>
-		<code><a href="source-class-Papi_Admin_Data_Handler.html#176-181" title="Go to source code">get_pre_data</a>( )</code>
+		<code><a href="source-class-Papi_Core_Data_Handler.html#176-181" title="Go to source code">get_pre_data</a>( )</code>
 
 		<div class="description short">
 			<p>Get pre data that should be saved before all properties data.</p>
@@ -539,7 +539,7 @@ Will decode property options recursive.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Admin_Data_Handler.html#8-13" title="Go to source code"><var>$overwrite</var></a>
+				<a href="source-class-Papi_Core_Data_Handler.html#8-13" title="Go to source code"><var>$overwrite</var></a>
 
 			<div class="description short">
 				<p>The fields that should be overwritten.</p>

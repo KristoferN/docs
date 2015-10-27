@@ -25,7 +25,7 @@
 			<ul>
 				<li class="active"><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Admin class.</p>
+	<p>Admin class that handle loading of Papi types,
+columns and loading of posts.</p>
 	</div>
 
 
@@ -271,7 +272,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Admin.html#3-456" title="Go to source code">admin/class-papi-admin.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Admin.html#3-410" title="Go to source code">admin/class-papi-admin.php</a>
 		<br>
 	</div>
 
@@ -291,7 +292,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Admin.html#29-37" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#30-38" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			<p>The constructor.</p>
@@ -321,7 +322,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___clone">#</a>
-		<code><a href="source-class-Papi_Admin.html#39-46" title="Go to source code">__clone</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#40-47" title="Go to source code">__clone</a>( )</code>
 
 		<div class="description short">
 			<p>Cloning is forbidden.</p>
@@ -354,7 +355,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___wakeup">#</a>
-		<code><a href="source-class-Papi_Admin.html#48-55" title="Go to source code">__wakeup</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#49-56" title="Go to source code">__wakeup</a>( )</code>
 
 		<div class="description short">
 			<p>Unserializing instances of this class is forbidden.</p>
@@ -387,7 +388,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_admin_init">#</a>
-		<code><a href="source-class-Papi_Admin.html#57-73" title="Go to source code">admin_init</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#58-74" title="Go to source code">admin_init</a>( )</code>
 
 		<div class="description short">
 			<p>Admin init.</p>
@@ -397,66 +398,6 @@
 			<p>Admin init.</p>
 
 <p>Setup the page type.</p>
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="admin_head" id="_admin_head">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_admin_head">#</a>
-		<code><a href="source-class-Papi_Admin.html#75-87" title="Go to source code">admin_head</a>( )</code>
-
-		<div class="description short">
-			<p>Add style to admin head.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Add style to admin head.</p>
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="admin_enqueue_scripts" id="_admin_enqueue_scripts">
-
-		<td class="attributes"><code>
-			 public 
-
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_admin_enqueue_scripts">#</a>
-		<code><a href="source-class-Papi_Admin.html#89-117" title="Go to source code">admin_enqueue_scripts</a>( )</code>
-
-		<div class="description short">
-			<p>Enqueue script into admin footer.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Enqueue script into admin footer.</p>
 
 
 
@@ -479,7 +420,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_admin_body_class">#</a>
-		<code><a href="source-class-Papi_Admin.html#119-136" title="Go to source code">admin_body_class</a>( <span>string <var>$classes</var></span> )</code>
+		<code><a href="source-class-Papi_Admin.html#76-93" title="Go to source code">admin_body_class</a>( <span>string <var>$classes</var></span> )</code>
 
 		<div class="description short">
 			<p>Add custom body class when it's a page type.</p>
@@ -518,7 +459,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_edit_form_after_title">#</a>
-		<code><a href="source-class-Papi_Admin.html#138-152" title="Go to source code">edit_form_after_title</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#95-109" title="Go to source code">edit_form_after_title</a>( )</code>
 
 		<div class="description short">
 			<p>Output Papi page type hidden field.</p>
@@ -550,7 +491,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hidden_meta_boxes">#</a>
-		<code><a href="source-class-Papi_Admin.html#154-167" title="Go to source code">hidden_meta_boxes</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#111-124" title="Go to source code">hidden_meta_boxes</a>( )</code>
 
 		<div class="description short">
 			<p>Output hidden meta boxes.</p>
@@ -580,7 +521,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hidden_meta_box_editor">#</a>
-		<code><a href="source-class-Papi_Admin.html#169-174" title="Go to source code">hidden_meta_box_editor</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#126-131" title="Go to source code">hidden_meta_box_editor</a>( )</code>
 
 		<div class="description short">
 			<p>Output hidden WordPress editor.</p>
@@ -610,7 +551,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_load_post_new">#</a>
-		<code><a href="source-class-Papi_Admin.html#187-228" title="Go to source code">load_post_new</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#143-184" title="Go to source code">load_post_new</a>( )</code>
 
 		<div class="description short">
 			<p>Load post new action
@@ -642,7 +583,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_manage_page_type_posts_columns">#</a>
-		<code><a href="source-class-Papi_Admin.html#230-247" title="Go to source code">manage_page_type_posts_columns</a>( <span>array <var>$defaults</var></span> )</code>
+		<code><a href="source-class-Papi_Admin.html#186-203" title="Go to source code">manage_page_type_posts_columns</a>( <span>array <var>$defaults</var></span> )</code>
 
 		<div class="description short">
 			<p>Add custom table header to page type.</p>
@@ -681,7 +622,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_manage_page_type_posts_custom_column">#</a>
-		<code><a href="source-class-Papi_Admin.html#249-271" title="Go to source code">manage_page_type_posts_custom_column</a>( <span>string <var>$column_name</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Admin.html#205-227" title="Go to source code">manage_page_type_posts_custom_column</a>( <span>string <var>$column_name</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Add custom table column to page type.</p>
@@ -718,7 +659,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_restrict_page_types">#</a>
-		<code><a href="source-class-Papi_Admin.html#273-319" title="Go to source code">restrict_page_types</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#229-275" title="Go to source code">restrict_page_types</a>( )</code>
 
 		<div class="description short">
 			<p>Filter page types in post type list.</p>
@@ -748,7 +689,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_pre_get_posts">#</a>
-		<code><a href="source-class-Papi_Admin.html#321-346" title="Go to source code">pre_get_posts</a>( <span>WP_Query <var>$query</var></span> )</code>
+		<code><a href="source-class-Papi_Admin.html#277-302" title="Go to source code">pre_get_posts</a>( <span>WP_Query <var>$query</var></span> )</code>
 
 		<div class="description short">
 			<p>Filter posts on load if <code>page_type</code> query string is set.</p>
@@ -787,7 +728,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setup_papi">#</a>
-		<code><a href="source-class-Papi_Admin.html#393-432" title="Go to source code">setup_papi</a>( )</code>
+		<code><a href="source-class-Papi_Admin.html#347-386" title="Go to source code">setup_papi</a>( )</code>
 
 		<div class="description short">
 			<p>Load right Papi file if it exists.</p>
@@ -821,7 +762,7 @@ Redirect to right url if no page type is set.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_wp_link_query">#</a>
-		<code><a href="source-class-Papi_Admin.html#434-455" title="Go to source code">wp_link_query</a>( <span>array <var>$results</var></span> )</code>
+		<code><a href="source-class-Papi_Admin.html#388-409" title="Go to source code">wp_link_query</a>( <span>array <var>$results</var></span> )</code>
 
 		<div class="description short">
 			<p>Filter the link query results.</p>

@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Conditional Rules class.</p>
+	<p>Conditional rules class that contains
+all rules.</p>
 	</div>
 
 
@@ -271,7 +272,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Conditional_Rules.html#3-478" title="Go to source code">conditional/class-papi-conditional-rules.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Conditional_Rules.html#3-479" title="Go to source code">conditional/class-papi-conditional-rules.php</a>
 		<br>
 	</div>
 
@@ -291,7 +292,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#8-13" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#9-14" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			<p>The constructor.</p>
@@ -321,7 +322,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_equal">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#179-189" title="Go to source code">rule_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#180-190" title="Go to source code">rule_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Equal conditional rule.</p>
@@ -360,7 +361,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_not_equal">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#191-201" title="Go to source code">rule_not_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#192-202" title="Go to source code">rule_not_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Not equal conditional rule.</p>
@@ -399,7 +400,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_greater_then">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#203-223" title="Go to source code">rule_greater_then</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#204-224" title="Go to source code">rule_greater_then</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Greater then conditional rule.</p>
@@ -438,7 +439,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_greater_then_or_equal">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#225-245" title="Go to source code">rule_greater_then_or_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#226-246" title="Go to source code">rule_greater_then_or_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Greater then or equal conditional rule.</p>
@@ -477,7 +478,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_less_then">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#247-267" title="Go to source code">rule_less_then</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#248-268" title="Go to source code">rule_less_then</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Less then conditional rule.</p>
@@ -516,7 +517,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_less_then_or_equal">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#269-289" title="Go to source code">rule_less_then_or_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#270-290" title="Go to source code">rule_less_then_or_equal</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Less then or equal conditional rule.</p>
@@ -555,7 +556,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_in">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#291-306" title="Go to source code">rule_in</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#292-307" title="Go to source code">rule_in</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>In array conditional rule.</p>
@@ -594,7 +595,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_not_in">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#308-323" title="Go to source code">rule_not_in</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#309-324" title="Go to source code">rule_not_in</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Not in array conditional rule.</p>
@@ -633,7 +634,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_like">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#325-347" title="Go to source code">rule_like</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#326-348" title="Go to source code">rule_like</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Like conditional rule.</p>
@@ -672,7 +673,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_between">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#380-395" title="Go to source code">rule_between</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#381-396" title="Go to source code">rule_between</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Between conditional rule.</p>
@@ -711,7 +712,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_not_between">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#397-412" title="Go to source code">rule_not_between</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#398-413" title="Go to source code">rule_not_between</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Not between conditional rule.</p>
@@ -750,7 +751,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_exists">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#414-423" title="Go to source code">rule_exists</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#415-424" title="Go to source code">rule_exists</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Exists conditional rule.</p>
@@ -789,7 +790,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_not_exists">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#425-434" title="Go to source code">rule_not_exists</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#426-435" title="Go to source code">rule_not_exists</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Not exists conditional rule.</p>
@@ -828,7 +829,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_empty">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#436-445" title="Go to source code">rule_empty</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#437-446" title="Go to source code">rule_empty</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Empty conditional rule.</p>
@@ -867,7 +868,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_rule_not_empty">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#447-456" title="Go to source code">rule_not_empty</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#448-457" title="Go to source code">rule_not_empty</a>( <span><code><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></code> <var>$rule</var></span> )</code>
 
 		<div class="description short">
 			<p>Empty conditional rule.</p>
@@ -906,7 +907,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setup_filters">#</a>
-		<code><a href="source-class-Papi_Conditional_Rules.html#458-477" title="Go to source code">setup_filters</a>( )</code>
+		<code><a href="source-class-Papi_Conditional_Rules.html#459-478" title="Go to source code">setup_filters</a>( )</code>
 
 		<div class="description short">
 			<p>Setup filters.</p>

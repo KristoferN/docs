@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,9 +254,9 @@
 
 
 	<div class="description">
-	<p>Papi Page Type class.</p>
-
-<p>All page types in the should extend this class.</p>
+	<p>Papi type that handle all psot types except attachment,
+option data and rendering. All page types should extend
+this class.</p>
 	</div>
 
 	<dl class="tree">
@@ -299,7 +299,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Page_Type.html#3-389" title="Go to source code">types/class-papi-page-type.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Page_Type.html#3-391" title="Go to source code">types/class-papi-page-type.php</a>
 		<br>
 	</div>
 
@@ -319,7 +319,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_box">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#39-89" title="Go to source code">box</a>( <span>mixed <var>$file_or_options</var> = []</span>, <span>array <var>$properties</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#39-91" title="Go to source code">box</a>( <span>mixed <var>$file_or_options</var> = []</span>, <span>array <var>$properties</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Add new meta box with properties.</p>
@@ -356,7 +356,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_display">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#128-137" title="Go to source code">display</a>( <span>string <var>$post_type</var></span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#130-139" title="Go to source code">display</a>( <span>string <var>$post_type</var></span> )</code>
 
 		<div class="description short">
 			<p>Should the Page Type be displayed in WordPress admin or not?</p>
@@ -395,7 +395,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_boxes">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#139-156" title="Go to source code">get_boxes</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type.html#141-158" title="Go to source code">get_boxes</a>( )</code>
 
 		<div class="description short">
 			<p>Get boxes from the page type.</p>
@@ -429,7 +429,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_post_type">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#158-165" title="Go to source code">get_post_type</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type.html#160-167" title="Go to source code">get_post_type</a>( )</code>
 
 		<div class="description short">
 			<p>Get post type.</p>
@@ -463,7 +463,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_child_property">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#167-195" title="Go to source code">get_child_property</a>( <span>array <var>$items</var></span>, <span>string <var>$slug</var></span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#169-197" title="Go to source code">get_child_property</a>( <span>array <var>$items</var></span>, <span>string <var>$slug</var></span> )</code>
 
 		<div class="description short">
 			<p>Get child property.</p>
@@ -504,7 +504,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_property">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#197-254" title="Go to source code">get_property</a>( <span>string <var>$slug</var></span>, <span>string <var>$child_slug</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#199-256" title="Go to source code">get_property</a>( <span>string <var>$slug</var></span>, <span>string <var>$child_slug</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			<p>Get property from page type.</p>
@@ -545,7 +545,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_setup">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#256-276" title="Go to source code">setup</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type.html#258-278" title="Go to source code">setup</a>( )</code>
 
 		<div class="description short">
 			<p>This function will setup all meta boxes.</p>
@@ -575,7 +575,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_property">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#278-288" title="Go to source code">property</a>( <span>array|string <var>$file_or_options</var> = []</span>, <span>array <var>$values</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#280-290" title="Go to source code">property</a>( <span>array|string <var>$file_or_options</var> = []</span>, <span>array <var>$values</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Add new property to the page using array or rendering property template file.</p>
@@ -616,7 +616,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#290-297" title="Go to source code">remove</a>( <span>array <var>$post_type_supports</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#292-299" title="Go to source code">remove</a>( <span>array <var>$post_type_supports</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Remove post type support. Runs once, on page load.</p>
@@ -651,7 +651,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove_post_type_support">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#299-331" title="Go to source code">remove_post_type_support</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type.html#301-333" title="Go to source code">remove_post_type_support</a>( )</code>
 
 		<div class="description short">
 			<p>Remove post type support action.</p>
@@ -681,7 +681,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_remove_meta_boxes">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#333-346" title="Go to source code">remove_meta_boxes</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type.html#335-348" title="Go to source code">remove_meta_boxes</a>( )</code>
 
 		<div class="description short">
 			<p>Remove meta boxes.</p>
@@ -711,7 +711,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_tab">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#348-376" title="Go to source code">tab</a>( <span>mixed <var>$file_or_options</var> = []</span>, <span>array <var>$properties</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#350-378" title="Go to source code">tab</a>( <span>mixed <var>$file_or_options</var> = []</span>, <span>array <var>$properties</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Add a new tab.</p>
@@ -752,7 +752,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_template">#</a>
-		<code><a href="source-class-Papi_Page_Type.html#378-388" title="Go to source code">template</a>( <span>string <var>$file</var></span>, <span>array <var>$values</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Page_Type.html#380-390" title="Go to source code">template</a>( <span>string <var>$file</var></span>, <span>array <var>$values</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Load template file.</p>

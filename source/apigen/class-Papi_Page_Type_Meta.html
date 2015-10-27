@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Page Type Meta class.</p>
+	<p>Base Papi type implementation of meta data
+for a page type.</p>
 	</div>
 
 	<dl class="tree">
@@ -294,7 +295,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Page_Type_Meta.html#3-223" title="Go to source code">types/class-papi-page-type-meta.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Page_Type_Meta.html#3-224" title="Go to source code">types/class-papi-page-type-meta.php</a>
 		<br>
 	</div>
 
@@ -314,7 +315,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#92-103" title="Go to source code">__construct</a>( <span>string <var>$file_path</var> = <span class="php-quote">''</span> </span> )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#93-104" title="Go to source code">__construct</a>( <span>string <var>$file_path</var> = <span class="php-quote">''</span> </span> )</code>
 
 		<div class="description short">
 			<p>The constructor.</p>
@@ -353,7 +354,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_current_user_is_allowed">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#105-118" title="Go to source code">current_user_is_allowed</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#106-119" title="Go to source code">current_user_is_allowed</a>( )</code>
 
 		<div class="description short">
 			<p>Is the user allowed to view this page type?</p>
@@ -387,7 +388,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_child_types">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#120-137" title="Go to source code">get_child_types</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#121-138" title="Go to source code">get_child_types</a>( )</code>
 
 		<div class="description short">
 			<p>Get child page types that lives under the current page type.</p>
@@ -421,7 +422,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_labels">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#139-167" title="Go to source code">get_labels</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#140-168" title="Go to source code">get_labels</a>( )</code>
 
 		<div class="description short">
 			<p>Get labels that should be changed
@@ -457,7 +458,7 @@ when using <code>fill_labels</code> option.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_thumbnail">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#169-180" title="Go to source code">get_thumbnail</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#170-181" title="Go to source code">get_thumbnail</a>( )</code>
 
 		<div class="description short">
 			<p>Get page type image thumbnail.</p>
@@ -491,7 +492,7 @@ when using <code>fill_labels</code> option.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_has_name">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#182-189" title="Go to source code">has_name</a>( )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#183-190" title="Go to source code">has_name</a>( )</code>
 
 		<div class="description short">
 			<p>Check so we have a name on the page type.</p>
@@ -525,7 +526,7 @@ when using <code>fill_labels</code> option.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_has_post_type">#</a>
-		<code><a href="source-class-Papi_Page_Type_Meta.html#191-200" title="Go to source code">has_post_type</a>( <span>string <var>$post_type</var></span> )</code>
+		<code><a href="source-class-Papi_Page_Type_Meta.html#192-201" title="Go to source code">has_post_type</a>( <span>string <var>$post_type</var></span> )</code>
 
 		<div class="description short">
 			<p>Check if the given post is allowed to use the page type.</p>
@@ -589,7 +590,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#8-13" title="Go to source code"><var>$_meta_method</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#9-14" title="Go to source code"><var>$_meta_method</var></a>
 
 			<div class="description short">
 				<p>The meta method to call.</p>
@@ -614,7 +615,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#15-20" title="Go to source code"><var>$capabilities</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#16-21" title="Go to source code"><var>$capabilities</var></a>
 
 			<div class="description short">
 				<p>Capabilities list.</p>
@@ -639,7 +640,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#22-27" title="Go to source code"><var>$child_types</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#23-28" title="Go to source code"><var>$child_types</var></a>
 
 			<div class="description short">
 				<p>The page types that lives under this page type.</p>
@@ -664,7 +665,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#29-34" title="Go to source code"><var>$description</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#30-35" title="Go to source code"><var>$description</var></a>
 
 			<div class="description short">
 				<p>The description of the page type.</p>
@@ -689,7 +690,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#36-41" title="Go to source code"><var>$fill_labels</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#37-42" title="Go to source code"><var>$fill_labels</var></a>
 
 			<div class="description short">
 				<p>Fill labels.</p>
@@ -714,7 +715,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#43-48" title="Go to source code"><var>$labels</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#44-49" title="Go to source code"><var>$labels</var></a>
 
 			<div class="description short">
 				<p>Labels, the same labels that post type object uses.</p>
@@ -739,7 +740,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#50-55" title="Go to source code"><var>$name</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#51-56" title="Go to source code"><var>$name</var></a>
 
 			<div class="description short">
 				<p>The name of the page type.</p>
@@ -764,7 +765,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#57-62" title="Go to source code"><var>$post_type</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#58-63" title="Go to source code"><var>$post_type</var></a>
 
 			<div class="description short">
 				<p>The post types to register the page type with.</p>
@@ -789,7 +790,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#64-69" title="Go to source code"><var>$sort_order</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#65-70" title="Go to source code"><var>$sort_order</var></a>
 
 			<div class="description short">
 				<p>The sort order of the page type.</p>
@@ -814,7 +815,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#71-76" title="Go to source code"><var>$standard_type</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#72-77" title="Go to source code"><var>$standard_type</var></a>
 
 			<div class="description short">
 				<p>Show standard page type or not.</p>
@@ -839,7 +840,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#78-83" title="Go to source code"><var>$template</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#79-84" title="Go to source code"><var>$template</var></a>
 
 			<div class="description short">
 				<p>The template of the page type.</p>
@@ -864,7 +865,7 @@ when using <code>fill_labels</code> option.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Page_Type_Meta.html#85-90" title="Go to source code"><var>$thumbnail</var></a>
+				<a href="source-class-Papi_Page_Type_Meta.html#86-91" title="Go to source code"><var>$thumbnail</var></a>
 
 			<div class="description short">
 				<p>The page type thumbnail.</p>

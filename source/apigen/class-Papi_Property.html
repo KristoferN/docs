@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Property class.</p>
+	<p>Base property that implements the rendering of
+a property in WordPress admin.</p>
 	</div>
 
 	<dl class="tree">
@@ -317,7 +318,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Property.html#3-248" title="Go to source code">properties/class-papi-property.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Property.html#3-170" title="Go to source code">properties/class-papi-property.php</a>
 		<br>
 	</div>
 
@@ -325,40 +326,6 @@
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="default_options" id="_default_options">
-
-		<td class="attributes"><code>
-			 public static
-
-			array
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_default_options">#</a>
-		<code><a href="source-class-Papi_Property.html#8-25" title="Go to source code">default_options</a>( )</code>
-
-		<div class="description short">
-			<p>Get default options.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get default options.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					array
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="html" id="_html">
 
 		<td class="attributes"><code>
@@ -371,7 +338,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_html">#</a>
-		<code><a href="source-class-Papi_Property.html#27-31" title="Go to source code">html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#9-13" title="Go to source code">html</a>( )</code>
 
 		<div class="description short">
 			<p>Render property html.</p>
@@ -382,88 +349,6 @@
 
 
 
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="html_id" id="_html_id">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_html_id">#</a>
-		<code><a href="source-class-Papi_Property.html#33-57" title="Go to source code">html_id</a>( <span>object|string <var>$suffix</var> = <span class="php-quote">''</span></span>, <span>integer <var>$row</var> = <span class="php-keyword1">null</span> </span> )</code>
-
-		<div class="description short">
-			<p>Get the html id attribute value.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get the html id attribute value.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$suffix</var></dt>
-					<dd></dd>
-					<dt><var>$row</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="html_name" id="_html_name">
-
-		<td class="attributes"><code>
-			 public 
-
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_html_name">#</a>
-		<code><a href="source-class-Papi_Property.html#59-91" title="Go to source code">html_name</a>( <span>array|object <var>$sub_property</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$row</var> = <span class="php-keyword1">null</span> </span> )</code>
-
-		<div class="description short">
-			<p>Get html name for property with or without sub property and row number.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get html name for property with or without sub property and row number.</p>
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$sub_property</var></dt>
-					<dd></dd>
-					<dt><var>$row</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					string
-				</div>
 
 
 
@@ -483,7 +368,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render">#</a>
-		<code><a href="source-class-Papi_Property.html#93-121" title="Go to source code">render</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#15-43" title="Go to source code">render</a>( )</code>
 
 		<div class="description short">
 			<p>Render the property.</p>
@@ -513,7 +398,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_description_html">#</a>
-		<code><a href="source-class-Papi_Property.html#123-134" title="Go to source code">render_description_html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#45-56" title="Go to source code">render_description_html</a>( )</code>
 
 		<div class="description short">
 			<p>Render the property description.</p>
@@ -543,7 +428,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_hidden_html">#</a>
-		<code><a href="source-class-Papi_Property.html#136-161" title="Go to source code">render_hidden_html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#58-83" title="Go to source code">render_hidden_html</a>( )</code>
 
 		<div class="description short">
 			<p>Output hidden input field that cointains which property is used.</p>
@@ -573,7 +458,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_label_html">#</a>
-		<code><a href="source-class-Papi_Property.html#163-177" title="Go to source code">render_label_html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#85-99" title="Go to source code">render_label_html</a>( )</code>
 
 		<div class="description short">
 			<p>Get label for the property.</p>
@@ -603,7 +488,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_property_html">#</a>
-		<code><a href="source-class-Papi_Property.html#179-196" title="Go to source code">render_property_html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#101-118" title="Go to source code">render_property_html</a>( )</code>
 
 		<div class="description short">
 			<p>Render property html.</p>
@@ -633,7 +518,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_row_html">#</a>
-		<code><a href="source-class-Papi_Property.html#198-227" title="Go to source code">render_row_html</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#120-149" title="Go to source code">render_row_html</a>( )</code>
 
 		<div class="description short">
 			<p>Render the final html that is displayed in the table.</p>
@@ -663,7 +548,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_rules_json">#</a>
-		<code><a href="source-class-Papi_Property.html#229-247" title="Go to source code">render_rules_json</a>( )</code>
+		<code><a href="source-class-Papi_Property.html#151-169" title="Go to source code">render_rules_json</a>( )</code>
 
 		<div class="description short">
 			<p>Render Conditional rules as script tag with JSON.</p>
@@ -693,6 +578,7 @@
 			<a href="class-Papi_Core_Property.html#___set">__set()</a>, 
 			<a href="class-Papi_Core_Property.html#_create">create()</a>, 
 			<a href="class-Papi_Core_Property.html#_delete_value">delete_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_disabled">disabled()</a>, 
 			<a href="class-Papi_Core_Property.html#_display">display()</a>, 
 			<a href="class-Papi_Core_Property.html#_factory">factory()</a>, 
 			<a href="class-Papi_Core_Property.html#_format_value">format_value()</a>, 
@@ -708,6 +594,8 @@
 			<a href="class-Papi_Core_Property.html#_get_settings">get_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_slug">get_slug()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_value">get_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_id">html_id()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_name">html_name()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_setting">import_setting()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_settings">import_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_value">import_value()</a>, 

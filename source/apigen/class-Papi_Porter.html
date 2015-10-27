@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Porter class.</p>
+	<p>Papi Porter class that handle import and export
+of properties data.</p>
 	</div>
 
 	<dl class="tree">
@@ -287,7 +288,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Porter.html#3-346" title="Go to source code">porter/class-papi-porter.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Porter.html#3-347" title="Go to source code">porter/class-papi-porter.php</a>
 		<br>
 	</div>
 
@@ -307,7 +308,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Papi_Porter.html#15-22" title="Go to source code">__construct</a>( )</code>
+		<code><a href="source-class-Papi_Porter.html#16-23" title="Go to source code">__construct</a>( )</code>
 
 		<div class="description short">
 			<p>The constructor.</p>
@@ -337,7 +338,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_add_driver">#</a>
-		<code><a href="source-class-Papi_Porter.html#24-34" title="Go to source code">add_driver</a>( <span><code><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></code> <var>$driver</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#25-35" title="Go to source code">add_driver</a>( <span><code><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></code> <var>$driver</var></span> )</code>
 
 		<div class="description short">
 			<p>Add Porter Driver.</p>
@@ -376,7 +377,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_after">#</a>
-		<code><a href="source-class-Papi_Porter.html#36-49" title="Go to source code">after</a>( <span>string <var>$filter</var></span>, <span>Closure <var>$closure</var></span>, <span>integer <var>$priority</var> = <span class="php-num">10</span></span>, <span>integer <var>$accepted_args</var> = <span class="php-num">2</span> </span> )</code>
+		<code><a href="source-class-Papi_Porter.html#37-50" title="Go to source code">after</a>( <span>string <var>$filter</var></span>, <span>Closure <var>$closure</var></span>, <span>integer <var>$priority</var> = <span class="php-num">10</span></span>, <span>integer <var>$accepted_args</var> = <span class="php-num">2</span> </span> )</code>
 
 		<div class="description short">
 			<p>Add after filter.</p>
@@ -421,7 +422,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_before">#</a>
-		<code><a href="source-class-Papi_Porter.html#51-64" title="Go to source code">before</a>( <span>string <var>$filter</var></span>, <span>Closure <var>$closure</var></span>, <span>integer <var>$priority</var> = <span class="php-num">10</span></span>, <span>integer <var>$accepted_args</var> = <span class="php-num">2</span> </span> )</code>
+		<code><a href="source-class-Papi_Porter.html#52-65" title="Go to source code">before</a>( <span>string <var>$filter</var></span>, <span>Closure <var>$closure</var></span>, <span>integer <var>$priority</var> = <span class="php-num">10</span></span>, <span>integer <var>$accepted_args</var> = <span class="php-num">2</span> </span> )</code>
 
 		<div class="description short">
 			<p>Add before filter.</p>
@@ -466,7 +467,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_driver">#</a>
-		<code><a href="source-class-Papi_Porter.html#66-77" title="Go to source code">driver</a>( <span>string|<code><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></code> <var>$driver</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#67-78" title="Go to source code">driver</a>( <span>string|<code><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></code> <var>$driver</var></span> )</code>
 
 		<div class="description short">
 			<p>Alias for <code>add_driver</code> or <code>use_driver</code> method.</p>
@@ -505,7 +506,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_driver_exists">#</a>
-		<code><a href="source-class-Papi_Porter.html#79-88" title="Go to source code">driver_exists</a>( <span>string <var>$driver</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#80-89" title="Go to source code">driver_exists</a>( <span>string <var>$driver</var></span> )</code>
 
 		<div class="description short">
 			<p>Check if a driver exists or not.</p>
@@ -544,7 +545,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_export">#</a>
-		<code><a href="source-class-Papi_Porter.html#90-139" title="Go to source code">export</a>( <span>mixed <var>$post_id</var></span>, <span>boolean <var>$only_values</var> = <span class="php-keyword1">false</span> </span> )</code>
+		<code><a href="source-class-Papi_Porter.html#91-140" title="Go to source code">export</a>( <span>mixed <var>$post_id</var></span>, <span>boolean <var>$only_values</var> = <span class="php-keyword1">false</span> </span> )</code>
 
 		<div class="description short">
 			<p>Export data from Papi. With or without all property options.</p>
@@ -585,7 +586,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_fire_filter">#</a>
-		<code><a href="source-class-Papi_Porter.html#141-175" title="Go to source code">fire_filter</a>( <span>array <var>$options</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#142-176" title="Go to source code">fire_filter</a>( <span>array <var>$options</var></span> )</code>
 
 		<div class="description short">
 			<p>Fire filter.</p>
@@ -629,7 +630,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_import_options">#</a>
-		<code><a href="source-class-Papi_Porter.html#177-198" title="Go to source code">get_import_options</a>( <span>mixed <var>$options</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#178-199" title="Go to source code">get_import_options</a>( <span>mixed <var>$options</var></span> )</code>
 
 		<div class="description short">
 			<p>Get import options.</p>
@@ -668,7 +669,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_value">#</a>
-		<code><a href="source-class-Papi_Porter.html#200-209" title="Go to source code">get_value</a>( <span>array <var>$options</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#201-210" title="Go to source code">get_value</a>( <span>array <var>$options</var></span> )</code>
 
 		<div class="description short">
 			<p>Get value that should be saved.</p>
@@ -707,7 +708,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_import">#</a>
-		<code><a href="source-class-Papi_Porter.html#211-295" title="Go to source code">import</a>( <span>mixed <var>$options</var></span>, <span>array <var>$fields</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Porter.html#212-296" title="Go to source code">import</a>( <span>mixed <var>$options</var></span>, <span>array <var>$fields</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Import data to Papi.</p>
@@ -748,7 +749,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_options">#</a>
-		<code><a href="source-class-Papi_Porter.html#297-309" title="Go to source code">options</a>( <span>array <var>$options</var> = [] </span> )</code>
+		<code><a href="source-class-Papi_Porter.html#298-310" title="Go to source code">options</a>( <span>array <var>$options</var> = [] </span> )</code>
 
 		<div class="description short">
 			<p>Add options per property.</p>
@@ -787,7 +788,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_use_driver">#</a>
-		<code><a href="source-class-Papi_Porter.html#311-345" title="Go to source code">use_driver</a>( <span>string <var>$driver</var></span> )</code>
+		<code><a href="source-class-Papi_Porter.html#312-346" title="Go to source code">use_driver</a>( <span>string <var>$driver</var></span> )</code>
 
 		<div class="description short">
 			<p>Change Porter driver.</p>
@@ -861,7 +862,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Porter.html#8-13" title="Go to source code"><var>$driver</var></a>
+				<a href="source-class-Papi_Porter.html#9-14" title="Go to source code"><var>$driver</var></a>
 
 			<div class="description short">
 				<p>The driver that should be used.</p>

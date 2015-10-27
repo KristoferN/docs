@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Function papi_get_cache_key</title>
+	<title>Class Papi_Admin_Assets</title>
 
 	<link rel="stylesheet" href="resources/style.css?e99947befd7bf673c6b43ff75e9e0f170c88a60e">
 
@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li class="active"><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li class="active"><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -241,7 +241,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li class="active">
-<span>Function</span>			</li>
+<span>Class</span>			</li>
 		</ul>
 		<ul>
 		</ul>
@@ -249,49 +249,173 @@
 		</ul>
 	</div>
 
-<div id="content" class="function">
-	<h1>Function papi_get_cache_key</h1>
+<div id="content" class="class">
+	<h1>Class Papi_Admin_Assets</h1>
 
 
 	<div class="description">
-	<p>Get Papi cache key.</p>
+	<p>Admin class that handle assets.</p>
 	</div>
+
+
+
+
+
+
+
+
 
 	<div class="info">
+		<b>Final</b><br>
 		
 		
-		<b>Located at</b>
-		<a href="source-function-papi_get_cache_key.html#183-202" title="Go to source code">
-			lib/utilities.php
-		</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Papi_Admin_Assets.html#3-65" title="Go to source code">admin/class-papi-admin-assets.php</a>
+		<br>
 	</div>
 
 
-	<table class="summary" id="parameters">
-	<caption>Parameters summary</caption>
-	<tr id="$key">
-		<td class="name"><code>string</code></td>
-		<td class="value"><code><var>$key</var></code></td>
-		<td></td>
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-Papi_Admin_Assets.html#8-15" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			<p>The constructor.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>The constructor.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
 	</tr>
-	<tr id="$suffix">
-		<td class="name"><code>mixed</code></td>
-		<td class="value"><code><var>$suffix</var></code></td>
-		<td></td>
+	<tr data-order="enqueue_css" id="_enqueue_css">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enqueue_css">#</a>
+		<code><a href="source-class-Papi_Admin_Assets.html#17-29" title="Go to source code">enqueue_css</a>( )</code>
+
+		<div class="description short">
+			<p>Enqueue CSS.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Enqueue CSS.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enqueue_js" id="_enqueue_js">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enqueue_js">#</a>
+		<code><a href="source-class-Papi_Admin_Assets.html#31-54" title="Go to source code">enqueue_js</a>( )</code>
+
+		<div class="description short">
+			<p>Enqueue JavaScript.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Enqueue JavaScript.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="enqueue_locale" id="_enqueue_locale">
+
+		<td class="attributes"><code>
+			 public 
+
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_enqueue_locale">#</a>
+		<code><a href="source-class-Papi_Admin_Assets.html#56-64" title="Go to source code">enqueue_locale</a>( )</code>
+
+		<div class="description short">
+			<p>Enqueue locale.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Enqueue locale.</p>
+
+
+
+
+
+
+
+		</div>
+		</div></td>
 	</tr>
 	</table>
 
-	<table class="summary" id="returns">
-	<caption>Return value summary</caption>
-	<tr>
-		<td class="name"><code>
-			string
-		</code></td>
-		<td>
-			string
-		</td>
-	</tr>
-	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
@@ -301,7 +425,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?05645352980953ecf807fb3a72c1b1a3dd12ec8f"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
 </body>
 </html>

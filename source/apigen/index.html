@@ -24,7 +24,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -38,6 +38,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -131,7 +132,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -172,7 +172,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -258,223 +258,250 @@
 <caption>Classes summary</caption>
 <tr>
 	<td class="name"><a href="class-Papi_Admin.html">Papi_Admin</a></td>
-	<td>Papi Admin class.</td>
+	<td><p>Admin class that handle loading of Papi types,
+columns and loading of posts.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></td>
-	<td>Papi Admin Ajax class.</td>
+	<td>Admin class that handle ajax calls.</td>
 </tr>
 <tr>
-	<td class="name"><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></td>
-	<td>Papi Data Handler class.</td>
+	<td class="name"><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></td>
+	<td>Admin class that handle assets.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></td>
-	<td>Papi Admin Management Pages class.</td>
+	<td>Admin class that handle management pages.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></td>
-	<td>Papi Admin Menu class.</td>
+	<td>Admin class that handles admin menus.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></td>
-	<td>Papi Admin Meta Box class.</td>
+	<td>Admin class that handles admin meta boxes.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Meta_Box_Tabs.html">Papi_Admin_Meta_Box_Tabs</a></td>
-	<td>Papi Admin Meta Box Tabs class.</td>
+	<td><p>Admin class that handles admin tabs in
+meta boxes.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Option_Handler.html">Papi_Admin_Option_Handler</a></td>
-	<td>Papi Admin Option Handler class.</td>
+	<td>Admin class that handle option post data.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_Post_Handler.html">Papi_Admin_Post_Handler</a></td>
-	<td>Papi Admin Post Handler class.</td>
+	<td>Admin class that handle post data.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Admin_View.html">Papi_Admin_View</a></td>
-	<td>Papi Admin View class.</td>
+	<td>Admin class that handle admin view rendering.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Attachment_Type.html">Papi_Attachment_Type</a></td>
-	<td>Papi Attachment Type class.</td>
+	<td><p>Papi type that handle attachment post type, post data
+and rendering. All attachment types should extend this
+class.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Conditional_Rules.html">Papi_Conditional_Rules</a></td>
-	<td>Papi Conditional Rules class.</td>
+	<td><p>Conditional rules class that contains
+all rules.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Container.html">Papi_Container</a></td>
-	<td>Papi Container class.</td>
+	<td>Container class that implements a container.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></td>
-	<td>Papi core autoload class.</td>
+	<td>Autoload class that autoload classes.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></td>
-	<td>Papi Core Conditional class.</td>
+	<td><p>Core class that handle if a conditional rule
+should display the property or not.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></td>
-	<td>Papi Core Conditional Rule class.</td>
+	<td>Core class that implements a conditional rule.</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></td>
+	<td>Core class that handle core post data.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></td>
-	<td>Papi Core Page class.</td>
+	<td>Core class that implements a Papi page.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></td>
-	<td>Papi Core Property class.</td>
+	<td>Core class that implements a Papi property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></td>
-	<td>Papi Core Type class.</td>
+	<td>Core class that implements a Papi type.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Loader.html">Papi_Loader</a></td>
-	<td>Papi loader class.</td>
+	<td><p>Papi loader class that handle the loading
+of the plugin.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Option_Page.html">Papi_Option_Page</a></td>
-	<td>Papi Option Page class.</td>
+	<td>Option page implementation of Papi page.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Option_Type.html">Papi_Option_Type</a></td>
-	<td>Papi Option Type class.</td>
+	<td><p>Papi type that handle option, option data
+and rendering. All option types should extend this
+class.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Page_Type.html">Papi_Page_Type</a></td>
-	<td>Papi Page Type class.</td>
+	<td><p>Papi type that handle all psot types except attachment,
+option data and rendering. All page types should extend
+this class.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Page_Type_Meta.html">Papi_Page_Type_Meta</a></td>
-	<td>Papi Page Type Meta class.</td>
+	<td><p>Base Papi type implementation of meta data
+for a page type.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Porter.html">Papi_Porter</a></td>
-	<td>Papi Porter class.</td>
+	<td><p>Papi Porter class that handle import and export
+of properties data.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Porter_Driver.html">Papi_Porter_Driver</a></td>
-	<td>Papi Porter Driver class.</td>
+	<td>Abstract implementation of Papi Porter driver.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Porter_Driver_Core.html">Papi_Porter_Driver_Core</a></td>
-	<td>Papi Porter Driver Core.</td>
+	<td>Papi core Porter driver.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Post_Page.html">Papi_Post_Page</a></td>
-	<td>Papi Post Page class.</td>
+	<td>Post page implementation of Papi page.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property.html">Papi_Property</a></td>
-	<td>Papi Property class.</td>
+	<td><p>Base property that implements the rendering of
+a property in WordPress admin.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Bool.html">Papi_Property_Bool</a></td>
-	<td>Papi Property Bool class.</td>
+	<td>Bool (true/false) property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Checkbox.html">Papi_Property_Checkbox</a></td>
-	<td>Papi Property Checkbox class.</td>
+	<td><p>HTML checkbox property that can handle one or
+more checkboxes.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Color.html">Papi_Property_Color</a></td>
-	<td>Property Color class.</td>
+	<td><p>Color property that implements WordPress color
+picker as a property.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Datetime.html">Papi_Property_Datetime</a></td>
-	<td>Papi Property Datetime class.</td>
+	<td>Datetime property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Divider.html">Papi_Property_Divider</a></td>
-	<td>Papi Property Divider class.</td>
+	<td>Divider property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Dropdown.html">Papi_Property_Dropdown</a></td>
-	<td>Papi Property Dropdown class.</td>
+	<td>Dropdown property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Editor.html">Papi_Property_Editor</a></td>
-	<td>Papi Property Editor class.</td>
+	<td>WordPress editor property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Email.html">Papi_Property_Email</a></td>
-	<td>Papi Property Email class.</td>
+	<td>HTML5 email input property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_File.html">Papi_Property_File</a></td>
-	<td>Papi Property File.</td>
+	<td>WordPress media file property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Flexible.html">Papi_Property_Flexible</a></td>
-	<td>Property Flexible class</td>
+	<td><p>Flexible repeater property that can repeat multiple properties
+with different properties per layout.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Gallery.html">Papi_Property_Gallery</a></td>
-	<td>Papi Property Gallery class.</td>
+	<td>WordPress media file property as a gallery.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Hidden.html">Papi_Property_Hidden</a></td>
-	<td>Papi Property Hidden class.</td>
+	<td>HTML hidden input property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Html.html">Papi_Property_Html</a></td>
-	<td>Papi Property Html class.</td>
+	<td>HTML property that can display html in the admin.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Image.html">Papi_Property_Image</a></td>
-	<td>Papi Property Image class.</td>
+	<td>WordPress media image property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Link.html">Papi_Property_Link</a></td>
-	<td>Property Link class.</td>
+	<td>WordPress link manager property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Number.html">Papi_Property_Number</a></td>
-	<td>Papi Property Number class.</td>
+	<td>HTML5 number input property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Post.html">Papi_Property_Post</a></td>
-	<td>Papi Property Post class.</td>
+	<td><p>Post property that can handle relationship
+between posts.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Radio.html">Papi_Property_Radio</a></td>
-	<td>Papi Property Radio class.</td>
+	<td><p>HTML radio buttons property that can handle one or
+more radio buttons.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Reference.html">Papi_Property_Reference</a></td>
-	<td>Papi Property Reference class.</td>
+	<td><p>Property that shows which relationships that exists
+between the current post and other posts.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Relationship.html">Papi_Property_Relationship</a></td>
-	<td>Papi Property Relationship class.</td>
+	<td><p>Relationship property that can handle
+more than one relationship between posts.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Repeater.html">Papi_Property_Repeater</a></td>
-	<td>Papi Property Repeater class.</td>
+	<td>Repeater property that can repeat multiple properties.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_String.html">Papi_Property_String</a></td>
-	<td>Papi Property String class.</td>
+	<td>HTML text input property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Term.html">Papi_Property_Term</a></td>
-	<td>Papi Property Term class.</td>
+	<td><p>Term property that handle relationship between
+terms and posts.</p></td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Text.html">Papi_Property_Text</a></td>
-	<td>Papi Property Text class.</td>
+	<td>HTML textarea property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_Url.html">Papi_Property_Url</a></td>
-	<td>Papi Property Url class.</td>
+	<td>HTML5 url input property.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-Papi_Property_User.html">Papi_Property_User</a></td>
-	<td>Papi Property User class.</td>
+	<td><p>User property that handle relationship between
+users and posts.</p></td>
 </tr>
 </table>
 
@@ -672,10 +699,6 @@ option table instead of the postmeta table.</p></td>
 	<td>Get box property.</td>
 </tr>
 <tr>
-	<td class="name"><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></td>
-	<td>Get Papi cache key.</td>
-</tr>
-<tr>
 	<td class="name"><a href="function-papi_get_class_name.html">papi_get_class_name</a></td>
 	<td>Get namespace name and/or class name from page type file.</td>
 </tr>
@@ -840,7 +863,7 @@ Values like "0", 0 and false should not return true.</p></td>
 	<td>Test if given object is a JSON string or not.</td>
 </tr>
 <tr>
-	<td class="name"><a href="function-papi_is_metod.html">papi_is_metod</a></td>
+	<td class="name"><a href="function-papi_is_method.html">papi_is_method</a></td>
 	<td>Check which http method it is.</td>
 </tr>
 <tr>
@@ -1040,6 +1063,6 @@ or update property values on the option page.</p></td>
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?05645352980953ecf807fb3a72c1b1a3dd12ec8f"></script>
+<script src="elementlist.js?93d52caaa78b37a02ecaf5d71acae3b767f7cd72"></script>
 </body>
 </html>

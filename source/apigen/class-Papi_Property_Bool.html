@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,7 @@
 
 
 	<div class="description">
-	<p>Papi Property Bool class.</p>
+	<p>Bool (true/false) property.</p>
 	</div>
 
 	<dl class="tree">
@@ -292,7 +292,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Property_Bool.html#3-100" title="Go to source code">properties/class-papi-property-bool.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Property_Bool.html#3-117" title="Go to source code">properties/class-papi-property-bool.php</a>
 		<br>
 	</div>
 
@@ -469,6 +469,47 @@ to WordPress admin or the site.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="prepare_value" id="_prepare_value">
+
+		<td class="attributes"><code>
+			 protected 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepare_value">#</a>
+		<code><a href="source-class-Papi_Property_Bool.html#88-103" title="Go to source code">prepare_value</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			<p>Prepare property value.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Prepare property value.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-Papi_Core_Property.html#_prepare_value">Papi_Core_Property::prepare_value()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="update_value" id="_update_value">
 
 		<td class="attributes"><code>
@@ -481,7 +522,7 @@ to WordPress admin or the site.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_update_value">#</a>
-		<code><a href="source-class-Papi_Property_Bool.html#88-99" title="Go to source code">update_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Bool.html#105-116" title="Go to source code">update_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Fix the database value on update.</p>
@@ -520,9 +561,6 @@ to WordPress admin or the site.</p>
 	<caption>Methods inherited from <a href="class-Papi_Property.html#methods">Papi_Property</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Papi_Property.html#_default_options">default_options()</a>, 
-			<a href="class-Papi_Property.html#_html_id">html_id()</a>, 
-			<a href="class-Papi_Property.html#_html_name">html_name()</a>, 
 			<a href="class-Papi_Property.html#_render">render()</a>, 
 			<a href="class-Papi_Property.html#_render_description_html">render_description_html()</a>, 
 			<a href="class-Papi_Property.html#_render_hidden_html">render_hidden_html()</a>, 
@@ -543,6 +581,7 @@ to WordPress admin or the site.</p>
 			<a href="class-Papi_Core_Property.html#___set">__set()</a>, 
 			<a href="class-Papi_Core_Property.html#_create">create()</a>, 
 			<a href="class-Papi_Core_Property.html#_delete_value">delete_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_disabled">disabled()</a>, 
 			<a href="class-Papi_Core_Property.html#_display">display()</a>, 
 			<a href="class-Papi_Core_Property.html#_factory">factory()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_child_properties">get_child_properties()</a>, 
@@ -557,11 +596,12 @@ to WordPress admin or the site.</p>
 			<a href="class-Papi_Core_Property.html#_get_settings">get_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_slug">get_slug()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_value">get_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_id">html_id()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_name">html_name()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_setting">import_setting()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_settings">import_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_is_option_page">is_option_page()</a>, 
 			<a href="class-Papi_Core_Property.html#_match_slug">match_slug()</a>, 
-			<a href="class-Papi_Core_Property.html#_prepare_value">prepare_value()</a>, 
 			<a href="class-Papi_Core_Property.html#_render_ajax_request">render_ajax_request()</a>, 
 			<a href="class-Papi_Core_Property.html#_render_is_allowed_by_rules">render_is_allowed_by_rules()</a>, 
 			<a href="class-Papi_Core_Property.html#_set_option">set_option()</a>, 

@@ -26,7 +26,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -40,6 +40,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -133,7 +134,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -174,7 +174,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -253,7 +253,7 @@
 <pre><code><span id="1" class="l"><a href="#1">  1: </a><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><a href="#2">  2: </a>
 </span><span id="3" class="l"><a href="#3">  3: </a><span class="php-comment">/**
-</span></span><span id="4" class="l"><a href="#4">  4: </a><span class="php-comment"> * Papi Property Bool class.
+</span></span><span id="4" class="l"><a href="#4">  4: </a><span class="php-comment"> * Bool (true/false) property.
 </span></span><span id="5" class="l"><a href="#5">  5: </a><span class="php-comment"> */</span>
 </span><span id="6" class="l"><a href="#6">  6: </a><span class="php-keyword1">class</span> Papi_Property_Bool <span class="php-keyword1">extends</span> Papi_Property {
 </span><span id="7" class="l"><a href="#7">  7: </a>
@@ -338,19 +338,36 @@
 </span><span id="86" class="l"><a href="#86"> 86: </a>    }
 </span><span id="87" class="l"><a href="#87"> 87: </a>
 </span><span id="88" class="l"><a href="#88"> 88: </a>    <span class="php-comment">/**
-</span></span><span id="89" class="l"><a href="#89"> 89: </a><span class="php-comment">     * Fix the database value on update.
+</span></span><span id="89" class="l"><a href="#89"> 89: </a><span class="php-comment">     * Prepare property value.
 </span></span><span id="90" class="l"><a href="#90"> 90: </a><span class="php-comment">     *
-</span></span><span id="91" class="l"><a href="#91"> 91: </a><span class="php-comment">     * @param  mixed  $value
-</span></span><span id="92" class="l"><a href="#92"> 92: </a><span class="php-comment">     * @param  string $slug
-</span></span><span id="93" class="l"><a href="#93"> 93: </a><span class="php-comment">     * @param  int    $post_id
-</span></span><span id="94" class="l"><a href="#94"> 94: </a><span class="php-comment">     *
-</span></span><span id="95" class="l"><a href="#95"> 95: </a><span class="php-comment">     * @return array
-</span></span><span id="96" class="l"><a href="#96"> 96: </a><span class="php-comment">     */</span>
-</span><span id="97" class="l"><a href="#97"> 97: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> update_value( <span class="php-var">$value</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> ) {
-</span><span id="98" class="l"><a href="#98"> 98: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;format_value( <span class="php-var">$value</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> );
-</span><span id="99" class="l"><a href="#99"> 99: </a>    }
-</span><span id="100" class="l"><a href="#100">100: </a>}
-</span><span id="101" class="l"><a href="#101">101: </a></span></code></pre>
+</span></span><span id="91" class="l"><a href="#91"> 91: </a><span class="php-comment">     * @param  mixed $value
+</span></span><span id="92" class="l"><a href="#92"> 92: </a><span class="php-comment">     *
+</span></span><span id="93" class="l"><a href="#93"> 93: </a><span class="php-comment">     * @return mixed
+</span></span><span id="94" class="l"><a href="#94"> 94: </a><span class="php-comment">     */</span>
+</span><span id="95" class="l"><a href="#95"> 95: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> prepare_value( <span class="php-var">$value</span> ) {
+</span><span id="96" class="l"><a href="#96"> 96: </a>        <span class="php-keyword1">if</span> ( <span class="php-keyword2">is_string</span>( <span class="php-var">$value</span> ) &amp;&amp;
+</span><span id="97" class="l"><a href="#97"> 97: </a>            ( <span class="php-var">$value</span> === <span class="php-quote">'true'</span> || <span class="php-var">$value</span> === <span class="php-quote">'on'</span> ) ||
+</span><span id="98" class="l"><a href="#98"> 98: </a>            <span class="php-var">$value</span> === <span class="php-keyword1">true</span> ) {
+</span><span id="99" class="l"><a href="#99"> 99: </a>            <span class="php-keyword1">return</span> <span class="php-keyword1">true</span>;
+</span><span id="100" class="l"><a href="#100">100: </a>        }
+</span><span id="101" class="l"><a href="#101">101: </a>
+</span><span id="102" class="l"><a href="#102">102: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">null</span>;
+</span><span id="103" class="l"><a href="#103">103: </a>    }
+</span><span id="104" class="l"><a href="#104">104: </a>
+</span><span id="105" class="l"><a href="#105">105: </a>    <span class="php-comment">/**
+</span></span><span id="106" class="l"><a href="#106">106: </a><span class="php-comment">     * Fix the database value on update.
+</span></span><span id="107" class="l"><a href="#107">107: </a><span class="php-comment">     *
+</span></span><span id="108" class="l"><a href="#108">108: </a><span class="php-comment">     * @param  mixed  $value
+</span></span><span id="109" class="l"><a href="#109">109: </a><span class="php-comment">     * @param  string $slug
+</span></span><span id="110" class="l"><a href="#110">110: </a><span class="php-comment">     * @param  int    $post_id
+</span></span><span id="111" class="l"><a href="#111">111: </a><span class="php-comment">     *
+</span></span><span id="112" class="l"><a href="#112">112: </a><span class="php-comment">     * @return array
+</span></span><span id="113" class="l"><a href="#113">113: </a><span class="php-comment">     */</span>
+</span><span id="114" class="l"><a href="#114">114: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> update_value( <span class="php-var">$value</span>, <span class="php-var">$slug</span>, <span class="php-var">$post_id</span> ) {
+</span><span id="115" class="l"><a href="#115">115: </a>        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;prepare_value( <span class="php-var">$value</span> );
+</span><span id="116" class="l"><a href="#116">116: </a>    }
+</span><span id="117" class="l"><a href="#117">117: </a>}
+</span><span id="118" class="l"><a href="#118">118: </a></span></code></pre>
 
 	<div id="footer">
 		 API documentation generated by <a href="http://apigen.org">ApiGen</a>
@@ -358,6 +375,6 @@
 </div>
 </div>
 <script src="resources/combined.js?e685cf306ff7af26861c1d8865255ca116cc5bd5"></script>
-<script src="elementlist.js?05645352980953ecf807fb3a72c1b1a3dd12ec8f"></script>
+<script src="elementlist.js?93d52caaa78b37a02ecaf5d71acae3b767f7cd72"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi Property Post class.</p>
+	<p>Post property that can handle relationship
+between posts.</p>
 	</div>
 
 	<dl class="tree">
@@ -292,7 +293,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Property_Post.html#3-176" title="Go to source code">properties/class-papi-property-post.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Property_Post.html#3-181" title="Go to source code">properties/class-papi-property-post.php</a>
 		<br>
 	</div>
 
@@ -312,7 +313,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_format_value">#</a>
-		<code><a href="source-class-Papi_Property_Post.html#15-31" title="Go to source code">format_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Post.html#16-32" title="Go to source code">format_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Format the value of the property before it's returned
@@ -359,7 +360,7 @@ to WordPress admin or the site.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_default_settings">#</a>
-		<code><a href="source-class-Papi_Property_Post.html#33-45" title="Go to source code">get_default_settings</a>( )</code>
+		<code><a href="source-class-Papi_Property_Post.html#34-46" title="Go to source code">get_default_settings</a>( )</code>
 
 		<div class="description short">
 			<p>Get default settings.</p>
@@ -395,7 +396,7 @@ to WordPress admin or the site.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get_posts">#</a>
-		<code><a href="source-class-Papi_Property_Post.html#47-87" title="Go to source code">get_posts</a>( <span>stdClass <var>$settings</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Post.html#48-92" title="Go to source code">get_posts</a>( <span>stdClass <var>$settings</var></span> )</code>
 
 		<div class="description short">
 			<p>Get posts.</p>
@@ -434,7 +435,7 @@ to WordPress admin or the site.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_html">#</a>
-		<code><a href="source-class-Papi_Property_Post.html#89-154" title="Go to source code">html</a>( )</code>
+		<code><a href="source-class-Papi_Property_Post.html#94-159" title="Go to source code">html</a>( )</code>
 
 		<div class="description short">
 			<p>Render property html.</p>
@@ -466,7 +467,7 @@ to WordPress admin or the site.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_import_value">#</a>
-		<code><a href="source-class-Papi_Property_Post.html#156-175" title="Go to source code">import_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
+		<code><a href="source-class-Papi_Property_Post.html#161-180" title="Go to source code">import_value</a>( <span>mixed <var>$value</var></span>, <span>string <var>$slug</var></span>, <span>integer <var>$post_id</var></span> )</code>
 
 		<div class="description short">
 			<p>Import value to the property.</p>
@@ -505,9 +506,6 @@ to WordPress admin or the site.</p>
 	<caption>Methods inherited from <a href="class-Papi_Property.html#methods">Papi_Property</a></caption>
 	<tr>
 		<td><code>
-			<a href="class-Papi_Property.html#_default_options">default_options()</a>, 
-			<a href="class-Papi_Property.html#_html_id">html_id()</a>, 
-			<a href="class-Papi_Property.html#_html_name">html_name()</a>, 
 			<a href="class-Papi_Property.html#_render">render()</a>, 
 			<a href="class-Papi_Property.html#_render_description_html">render_description_html()</a>, 
 			<a href="class-Papi_Property.html#_render_hidden_html">render_hidden_html()</a>, 
@@ -528,6 +526,7 @@ to WordPress admin or the site.</p>
 			<a href="class-Papi_Core_Property.html#___set">__set()</a>, 
 			<a href="class-Papi_Core_Property.html#_create">create()</a>, 
 			<a href="class-Papi_Core_Property.html#_delete_value">delete_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_disabled">disabled()</a>, 
 			<a href="class-Papi_Core_Property.html#_display">display()</a>, 
 			<a href="class-Papi_Core_Property.html#_factory">factory()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_child_properties">get_child_properties()</a>, 
@@ -541,6 +540,8 @@ to WordPress admin or the site.</p>
 			<a href="class-Papi_Core_Property.html#_get_settings">get_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_slug">get_slug()</a>, 
 			<a href="class-Papi_Core_Property.html#_get_value">get_value()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_id">html_id()</a>, 
+			<a href="class-Papi_Core_Property.html#_html_name">html_name()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_setting">import_setting()</a>, 
 			<a href="class-Papi_Core_Property.html#_import_settings">import_settings()</a>, 
 			<a href="class-Papi_Core_Property.html#_is_option_page">is_option_page()</a>, 
@@ -581,7 +582,7 @@ to WordPress admin or the site.</p>
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Property_Post.html#8-13" title="Go to source code"><var>$convert_type</var></a>
+				<a href="source-class-Papi_Property_Post.html#9-14" title="Go to source code"><var>$convert_type</var></a>
 
 			<div class="description short">
 				<p>The convert type.</p>

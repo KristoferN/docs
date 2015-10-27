@@ -25,7 +25,7 @@
 			<ul>
 				<li><a href="class-Papi_Admin.html">Papi_Admin</a></li>
 				<li><a href="class-Papi_Admin_Ajax.html">Papi_Admin_Ajax</a></li>
-				<li><a href="class-Papi_Admin_Data_Handler.html">Papi_Admin_Data_Handler</a></li>
+				<li><a href="class-Papi_Admin_Assets.html">Papi_Admin_Assets</a></li>
 				<li><a href="class-Papi_Admin_Management_Pages.html">Papi_Admin_Management_Pages</a></li>
 				<li><a href="class-Papi_Admin_Menu.html">Papi_Admin_Menu</a></li>
 				<li><a href="class-Papi_Admin_Meta_Box.html">Papi_Admin_Meta_Box</a></li>
@@ -39,6 +39,7 @@
 				<li><a href="class-Papi_Core_Autoload.html">Papi_Core_Autoload</a></li>
 				<li><a href="class-Papi_Core_Conditional.html">Papi_Core_Conditional</a></li>
 				<li><a href="class-Papi_Core_Conditional_Rule.html">Papi_Core_Conditional_Rule</a></li>
+				<li><a href="class-Papi_Core_Data_Handler.html">Papi_Core_Data_Handler</a></li>
 				<li><a href="class-Papi_Core_Page.html">Papi_Core_Page</a></li>
 				<li><a href="class-Papi_Core_Property.html">Papi_Core_Property</a></li>
 				<li><a href="class-Papi_Core_Type.html">Papi_Core_Type</a></li>
@@ -132,7 +133,6 @@
 				<li><a href="function-papi_get_all_page_type_files.html">papi_get_all_page_type_files</a></li>
 				<li><a href="function-papi_get_all_page_types.html">papi_get_all_page_types</a></li>
 				<li><a href="function-papi_get_box_property.html">papi_get_box_property</a></li>
-				<li><a href="function-papi_get_cache_key.html">papi_get_cache_key</a></li>
 				<li><a href="function-papi_get_class_name.html">papi_get_class_name</a></li>
 				<li><a href="function-papi_get_field.html">papi_get_field</a></li>
 				<li><a href="function-papi_get_file_path.html">papi_get_file_path</a></li>
@@ -173,7 +173,7 @@
 				<li><a href="function-papi_include_template.html">papi_include_template</a></li>
 				<li><a href="function-papi_is_empty.html">papi_is_empty</a></li>
 				<li><a href="function-papi_is_json.html">papi_is_json</a></li>
-				<li><a href="function-papi_is_metod.html">papi_is_metod</a></li>
+				<li><a href="function-papi_is_method.html">papi_is_method</a></li>
 				<li><a href="function-papi_is_option_page.html">papi_is_option_page</a></li>
 				<li><a href="function-papi_is_option_type.html">papi_is_option_type</a></li>
 				<li><a href="function-papi_is_page_type.html">papi_is_page_type</a></li>
@@ -254,7 +254,8 @@
 
 
 	<div class="description">
-	<p>Papi loader class.</p>
+	<p>Papi loader class that handle the loading
+of the plugin.</p>
 	</div>
 
 	<dl class="tree">
@@ -287,7 +288,7 @@
 		
 		
 
-			<b>Located at</b> <a href="source-class-Papi_Loader.html#6-201" title="Go to source code">papi-loader.php</a>
+			<b>Located at</b> <a href="source-class-Papi_Loader.html#6-208" title="Go to source code">papi-loader.php</a>
 		<br>
 	</div>
 
@@ -307,7 +308,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_instance">#</a>
-		<code><a href="source-class-Papi_Loader.html#25-39" title="Go to source code">instance</a>( )</code>
+		<code><a href="source-class-Papi_Loader.html#26-37" title="Go to source code">instance</a>( )</code>
 
 		<div class="description short">
 			<p>Papi loader instance.</p>
@@ -329,6 +330,47 @@
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="__call" id="___call">
+
+		<td class="attributes"><code>
+			 public 
+
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___call">#</a>
+		<code><a href="source-class-Papi_Loader.html#39-49" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>array <var>$arguments</var></span> )</code>
+
+		<div class="description short">
+			<p>Call function in the container.</p>
+		</div>
+
+		<div class="description detailed hidden">
+			<p>Call function in the container.</p>
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd></dd>
+					<dt><var>$arguments</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					mixed
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="__clone" id="___clone">
 
 		<td class="attributes"><code>
@@ -341,7 +383,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___clone">#</a>
-		<code><a href="source-class-Papi_Loader.html#49-56" title="Go to source code">__clone</a>( )</code>
+		<code><a href="source-class-Papi_Loader.html#63-70" title="Go to source code">__clone</a>( )</code>
 
 		<div class="description short">
 			<p>Cloning is forbidden.</p>
@@ -374,7 +416,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___wakeup">#</a>
-		<code><a href="source-class-Papi_Loader.html#58-65" title="Go to source code">__wakeup</a>( )</code>
+		<code><a href="source-class-Papi_Loader.html#72-79" title="Go to source code">__wakeup</a>( )</code>
 
 		<div class="description short">
 			<p>Unserializing instances of this class is forbidden.</p>
@@ -395,40 +437,6 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="porter" id="_porter">
-
-		<td class="attributes"><code>
-			 public 
-
-			Papi_Core_Porter
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_porter">#</a>
-		<code><a href="source-class-Papi_Loader.html#102-109" title="Go to source code">porter</a>( )</code>
-
-		<div class="description short">
-			<p>Get the porter.</p>
-		</div>
-
-		<div class="description detailed hidden">
-			<p>Get the porter.</p>
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					Papi_Core_Porter
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="deactivate" id="_deactivate">
 
 		<td class="attributes"><code>
@@ -441,7 +449,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_deactivate">#</a>
-		<code><a href="source-class-Papi_Loader.html#166-186" title="Go to source code">deactivate</a>( )</code>
+		<code><a href="source-class-Papi_Loader.html#173-193" title="Go to source code">deactivate</a>( )</code>
 
 		<div class="description short">
 			<p>Deactivate Papi if the WordPress version is lower then 4.0.</p>
@@ -501,7 +509,7 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Papi_Loader.html#18-23" title="Go to source code"><var>$name</var></a>
+				<a href="source-class-Papi_Loader.html#19-24" title="Go to source code"><var>$name</var></a>
 
 			<div class="description short">
 				<p>The plugin name.</p>
