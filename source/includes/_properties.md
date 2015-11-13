@@ -1199,6 +1199,7 @@ papi_property( [
   'type'     => 'term',
   'settings  => [
   	'taxonomy' => 'my_taxonomy'
+	'query'    => [ 'hide_empty' => false ]
   ]
 ] )
 
